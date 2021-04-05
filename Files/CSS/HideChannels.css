@@ -1,0 +1,19 @@
+/* For other Fixes such as Hide Memberlist , Servers etc they are now located in https://raw.githubusercontent.com/SuperDeath/superdeath.github.io/master/README.md
+PS if your looking at this your awesome and wash your hands and stay safe OWO :) */
+/* Hide Channels and show them on hover*/
+.container-35XQWE:hover{
+  opacity: 100%;
+}
+.sidebar-2K8pFh{
+  width:0px !important;
+  transition:.5s ease !important;
+}
+.platform-win .base-3dtUhz{
+  border-radius: 8px 0 0 !important;
+}
+.wrapper-1Rf91z:hover+.base-3dtUhz>.content-98HsJk>.sidebar-2K8pFh{
+  width:240px !important;
+}
+.sidebar-2K8pFh:hover{
+  width:240px !important;
+}

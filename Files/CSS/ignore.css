@@ -1,0 +1,32 @@
+/* Editing the Clearvision Logo to hide when not hovering over
+/* And inturn making the Spotify box look better*/
+.container-3baos1:before {
+	display: none;
+}
+.container-3baos1:after {
+	content: "ClearVision" !important;
+	left: 40% ;
+}
+/* makes the unread thing in the center instead of the right, also rounds it */
+  .unreadPill-2HyYtt {
+    left: 45%;
+    right: 50%;
+    border-radius: 10px;
+  }
+/* gets rid of the pointy tip on the unread bar  */
+  .unreadPillCap-3_K2q2 {
+    display: none;
+  }
+
+/* Activity hider Added to CV v7*/
+.nowPlayingColumn-2sl4cE {
+  position: relative;
+  left: 339px ;
+  opacity: 1;
+  margin-left: -320px;
+  transition: .7s all ease-out;}
+.nowPlayingColumn-2sl4cE:hover {
+  left: 0 ;
+  opacity: 1;
+  margin-left: 0;
+  transition: .7s all ease-out;}*/

@@ -1,0 +1,94 @@
+/** this is my own changes i use id say dont use this **/
+
+/* Remove grayscale filter on emotes you cant use */
+.emojiItem-14v6tW.emojiItemDisabled-1FvFuF { filter: none;}
+/* Remove CV WaterMark */
+.container-3baos1:before , .container-3baos1:after {
+  display: none;
+}/* Making the Channel discription bar Draggable */
+.title-3qD0b- {
+  -webkit-app-region: drag;
+}
+/* Moving the Spotify Player to the left */
+.spotify-in-discord-player {
+    transition: 0.5s;
+    border-top-right-radius: 8px;
+    position: fixed;
+    z-index: 1;
+    bottom: 0.5px;
+      left: 0px;
+    background-color: rgba(17, 17, 17, 0.233);
+      overflow: hidden;
+      width: 72px;
+  }
+  .spotify-in-discord-player:hover {
+      width: 240px;
+  }
+  .spotify-in-discord-player-seek-bar-progress {
+      background-color: var(--main-color);
+  }
+  .spotify-in-discord-player-seek-bar {
+    background-color: var(--background-overlay);
+  }
+  .spotify-in-discord-player {
+    background-color: rgba(0, 0, 0, 0.972);
+  }
+  .panels-j1Uci_ .container-3baos1 {
+      border: 0;
+  }
+  .spotify-in-discord-player .avatarWrapper-2yR4wp {
+      margin-left: 12px;
+      transition: 0.5s;
+  }
+  .spotify-in-discord-player:hover .avatarWrapper-2yR4wp {
+      margin-left: 0px;
+  }
+/* Removing Annoying things such as Separators in the 
+settings page and Mark Unread and speak msg buttons */
+#message-mark-unread,
+#message-tts {
+    display: none;    
+}
+.separator-gCa7yv {
+    display: none;
+}
+/*Hide Stickers*/
+.wrapper-2a6GCs .assetWrapper-3GNt0z[style] {
+  height:auto !important;
+  width:auto !important;
+}
+.wrapper-2a6GCs .assetWrapper-3GNt0z[style]:active {
+  height:160px !important;
+  width:160px !important;
+}
+.wrapper-2a6GCs .assetWrapper-3GNt0z[style]:after {
+  content:'blocked sticker - Show Sticker';
+  color:var(--text-link);
+}
+.wrapper-2a6GCs .assetWrapper-3GNt0z[style]:active:after {
+  content:none;
+}
+.wrapper-2a6GCs .assetWrapper-3GNt0z[style]:hover:after {
+  text-decoration:underline;
+}
+.wrapper-2a6GCs .assetWrapper-3GNt0z[style] .lottieCanvas-1W7L-f,
+.wrapper-2a6GCs .assetWrapper-3GNt0z[style] .pngImage-33yLRP {
+  display:none;
+}
+.wrapper-2a6GCs .assetWrapper-3GNt0z[style]:active .lottieCanvas-1W7L-f,
+.wrapper-2a6GCs .assetWrapper-3GNt0z[style]:active .pngImage-33yLRP {
+  display:block;
+}
+/* Hide Sticker Autocomplete */
+.emojiStickersDivider-3Q5Opa ~ .autocompleteRowVertical-q1K4ky,
+.emojiStickersDivider-3Q5Opa {
+display: none;
+}
+/* Removes Add a server and desco buttons */
+.circleButtonMask-1_597P.wrapper-25eVIn {
+  display: none;
+}
+/* remove icons from channel names */
+.children-3rEycc {
+    display: none;
+  }
