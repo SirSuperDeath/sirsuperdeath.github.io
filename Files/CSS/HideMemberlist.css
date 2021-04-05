@@ -1,0 +1,36 @@
+/* For other Fixes such as Hide Memberlist , Servers etc they are now located in https://raw.githubusercontent.com/SuperDeath/superdeath.github.io/master/README.md
+PS if your looking at this your awesome and wash your hands and stay safe OWO :) */  
+/*Member list hider*/
+  .membersWrap-2h-GB4:before {
+    content: 'Members';
+    color: #fff;
+    line-height: 20px;
+    font-family: inherit;
+    font-size: 16px;
+    width: 105px;
+    height: 20px;
+    background-color: var(--main-color);
+    position: absolute;
+    text-align: center;
+    white-space: pre-wrap;
+    left: -70px;
+    top: 60px;
+    border-radius: 5px;
+    transform: rotate(270deg);
+  }
+  
+  .membersWrap-2h-GB4:hover:before {
+    background-color: var(--hover-color);
+  }
+  
+  .membersWrap-2h-GB4 {
+    left: var(--members-width);
+    margin-left: calc(var(--members-width) * -1);
+    transition: .4s all ease-out;
+  }
+  
+  .membersWrap-2h-GB4:hover{
+    left: 0;
+  }
+  
+  

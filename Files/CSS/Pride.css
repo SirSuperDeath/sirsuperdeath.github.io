@@ -1,0 +1,73 @@
+/**
+ * @name Rainbows
+ * @author SirSuperDeath#8930
+ * @version 1.2.1
+ * @description You like Rainbows thats good we do too
+*/
+
+/* Rainbow Mentions */
+@keyframes rainbow_animation {
+    0%,100% {
+    background-position: 0 0;}
+    50% {
+    background-position: 100% 0;}}
+  .markup-2BOw-j .messageContent-2qWWxC {
+    background-color: rgba(0, 0, 0, 0.1) !important; 
+    background-image: linear-gradient(to right, #ff000050, #FF8C0030, #FFD70030, #00FF0030, #00BFFF30 , #BA55D330, #ff000050) !important;
+    background-size: 400% 100% !important;
+    animation: rainbow_animation 10s ease-in-out infinite !important;
+  }
+  
+/* Rainbow Channels */
+  .wrapper-1ucjTd.modeSelected-1zApJ_ .content-3at_AU:after{    
+    background: none;
+    background-image: linear-gradient(to right, #ff000050, #FF8C0030, #FFD70030, #00FF0030, #00BFFF30 , #BA55D330, #ff000050) !important;
+    background-size: 400% 100% !important;
+    animation: rainbow_animation 5s ease-in-out infinite !important;
+  }
+  
+/* Rainbow Folders */
+  @keyframes rainbow_animation {
+    0%,100% {
+    background-position: 0 0;}
+    50% {
+    background-position: 100% 0;}}
+    .folderIconWrapper-226oVY{    
+    background: none;
+    background-image: linear-gradient(to right, #ff000050, #FF8C0030, #FFD70030, #00FF0030, #00BFFF30 , #BA55D330, #ff000050) !important;
+    background-size: 400% 100% !important;
+    animation: rainbow_animation 20s ease-in-out infinite !important;
+  }
+
+/* .scrollableContainer-2NUZem:focus-within {border: 2px solid red /*
+
+    /* Rainbow Folders */
+  @keyframes rainbow_animation {
+    0%,100% {
+    border-position: 0 0;}
+    50% {
+    border-position: 100% 0;}}
+    .scrollableContainer-2NUZem:focus-within {    
+    background: none;
+    background-image-slice: linear-gradient(to right, #ff000050, #FF8C0030, #FFD70030, #00FF0030, #00BFFF30 , #BA55D330, #ff000050) !important;
+    background-size: 400% 100% !important;
+    animation: rainbow_animation 20s ease-in-out infinite !important;
+  }
+/* Rainbow Text */   
+  .markup-2BOw-j {
+    animation: rainbow_animation linear 10s infinite;
+    } 
+    
+    @keyframes rainbow_animation {
+      0%   {color: red;}
+      25%  {color:blue;}
+      50%  {color: #f8d50bd7;}
+      75%  {color: #00ff0083;}
+      100% {color: red;}
+    }
+
+
+
+
+
+

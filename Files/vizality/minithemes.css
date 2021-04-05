@@ -1,0 +1,50 @@
+/* Vizality CSS/Theme Addons */
+/* Home Icon Vizality (Code by SirSuperDeath) */
+#app-mount .listItemWrapper-3X98Pc .childWrapper-anI2G9 {
+	background: url("https://i.imgur.com/i333IYr.png") center/cover no-repeat;
+    background-size: 130%;
+    transition: 0.3s ease-in-out;
+  }
+#app-mount .listItemWrapper-3X98Pc .childWrapper-anI2G9:hover {
+	background: url("https://i.imgur.com/Ekke9TY.gif") center/cover no-repeat;
+    background-size: 135%;
+    transition: 0.3s ease-in-out;
+}
+.homeIcon-tEMBK1 {
+    display: none;
+  }
+/* Vizality Spotify Plugin Addon
+/* Moving the Spotify Player to the left *
+.spotify-in-discord-player {
+  transition: 0.5s;
+  border-top-right-radius: 8px;
+  position: fixed;
+  z-index: 1;
+  bottom: 0.5px;
+    left: 0px;
+  background-color: rgba(17, 17, 17, 0.233);
+    overflow: hidden;
+    width: 72px;
+}
+.spotify-in-discord-player:hover {
+    width: 240px;
+}
+.spotify-in-discord-player-seek-bar-progress {
+    background-color: var(--main-color);
+}
+.spotify-in-discord-player-seek-bar {
+  background-color: var(--background-overlay);
+}
+.spotify-in-discord-player {
+  background-color: rgba(0, 0, 0, 0.972);
+}
+.panels-j1Uci_ .container-3baos1 {
+    border: 0;
+}
+.spotify-in-discord-player .avatarWrapper-2yR4wp {
+    margin-left: 12px;
+    transition: 0.5s;
+}
+.spotify-in-discord-player:hover .avatarWrapper-2yR4wp {
+    margin-left: 0px;
+}
