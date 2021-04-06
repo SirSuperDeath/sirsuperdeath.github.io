@@ -148,3 +148,7 @@ div:not(:hover)>.members-1998pB>div{
 /*Better Discord Plugins/Themes tab themed */
 #app-mount .bd-addon-list .bd-addon-card, .bd-addon-list .bd-addon-header {background-color: rgba(0, 0, 0, 0.294);
 }
+/* Removing Background of the Voice chat */
+.noChat-18KtBD .content-2Sfaij>.background-ujHpbY, .tile-2naSqK {
+  background: transparent !important
+}
