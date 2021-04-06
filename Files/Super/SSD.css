@@ -5,9 +5,6 @@
 /* Remove CV WaterMark */
 .container-3baos1:before , .container-3baos1:after {
   display: none;
-}/* Making the Channel discription bar Draggable */
-.title-3qD0b- {
-  -webkit-app-region: drag;
 }
 /* Moving the Spotify Player to the left */
 .spotify-in-discord-player {
