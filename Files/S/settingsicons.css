@@ -1,0 +1,29 @@
+/* Settings Icons */
+/* Accessibility */
+.standardSidebarView-3F1I7i .side-8zPYf6 .item-PXvHYJ[aria-controls="Accessibility-tab"]::before {
+	background: url("https://raw.githubusercontent.com/KillYoy/DiscordNight/master/Icons/SVG/Accessibility.svg");
+}
+/* BetterDiscord Icons */
+.standardSidebarView-3F1I7i .side-8zPYf6 .bd-settings-tab::before {
+	background: url("https://raw.githubusercontent.com/KillYoy/DiscordNight/master/Icons/SVG/BetterDiscord.svg");
+}
+.standardSidebarView-3F1I7i .side-8zPYf6 .bd-emotes-tab::before {
+	background: url("https://raw.githubusercontent.com/KillYoy/DiscordNight/master/Icons/SVG/Emoji.svg");
+}
+.standardSidebarView-3F1I7i .side-8zPYf6 .bd-plugins-tab::before {
+	background: url("https://raw.githubusercontent.com/KillYoy/DiscordNight/master/Icons/SVG/Plugins.svg");
+}
+.standardSidebarView-3F1I7i .side-8zPYf6 .bd-themes-tab::before {
+	background: url("https://raw.githubusercontent.com/KillYoy/DiscordNight/master/Icons/SVG/Theme.svg");
+}
+.standardSidebarView-3F1I7i .side-8zPYf6 .bd-customcss-tab::before {
+	background: url("https://raw.githubusercontent.com/KillYoy/DiscordNight/master/Icons/SVG/Code.svg");
+}
+/* Plugin Repo */
+.sidebarRegionScroller-3MXcoP .item-PXvHYJ[aria-controls="pluginrepo-tab"]::before {
+	background: url("https://raw.githubusercontent.com/KillYoy/DiscordNight/master/Icons/SVG/Plugins.svg");
+}
+/* Theme Repo */
+.sidebarRegionScroller-3MXcoP .item-PXvHYJ[aria-controls="themerepo-tab"]::before {
+	background: url("https://raw.githubusercontent.com/KillYoy/DiscordNight/master/Icons/SVG/Theme.svg");
+}
