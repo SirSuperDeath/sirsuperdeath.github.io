@@ -50,31 +50,32 @@ settings page and Mark Unread and speak msg buttons */
     display: none;
 }
 /*Hide Stickers*/
-.wrapper-2a6GCs .assetWrapper-3GNt0z[style] {
-  height:auto !important;
-  width:auto !important;
+.message-2qnXI6 .assetWrapper-3GNt0z {
+  height: auto !important;
+  width: auto !important;
 }
-.wrapper-2a6GCs .assetWrapper-3GNt0z[style]:active {
-  height:160px !important;
-  width:160px !important;
+.message-2qnXI6 .assetWrapper-3GNt0z:active {
+  height: 160px !important;
+  width: 160px !important;
 }
-.wrapper-2a6GCs .assetWrapper-3GNt0z[style]:after {
-  content:'blocked sticker - Show Sticker';
-  color:var(--text-link);
+.message-2qnXI6 .assetWrapper-3GNt0z:after {
+  color: var(--text-link);
+  content: 'blocked sticker - Show Sticker';
 }
-.wrapper-2a6GCs .assetWrapper-3GNt0z[style]:active:after {
-  content:none;
+.message-2qnXI6 .assetWrapper-3GNt0z:hover::after {
+  cursor: pointer;
+  text-decoration: underline;
 }
-.wrapper-2a6GCs .assetWrapper-3GNt0z[style]:hover:after {
-  text-decoration:underline;
+.message-2qnXI6 .assetWrapper-3GNt0z:active::after {
+  content: none;
 }
-.wrapper-2a6GCs .assetWrapper-3GNt0z[style] .lottieCanvas-1W7L-f,
-.wrapper-2a6GCs .assetWrapper-3GNt0z[style] .pngImage-33yLRP {
-  display:none;
+.message-2qnXI6 .assetWrapper-3GNt0z .pngImage-33yLRP,
+.message-2qnXI6 .assetWrapper-3GNt0z .lottieCanvas-1W7L-f {
+  display: none;
 }
-.wrapper-2a6GCs .assetWrapper-3GNt0z[style]:active .lottieCanvas-1W7L-f,
-.wrapper-2a6GCs .assetWrapper-3GNt0z[style]:active .pngImage-33yLRP {
-  display:block;
+.message-2qnXI6 .assetWrapper-3GNt0z:active .pngImage-33yLRP,
+.message-2qnXI6 .assetWrapper-3GNt0z:active .lottieCanvas-1W7L-f {
+  display: block;
 }
 /* Hide Sticker Autocomplete */
 .emojiStickersDivider-3Q5Opa ~ .autocompleteRowVertical-q1K4ky,
