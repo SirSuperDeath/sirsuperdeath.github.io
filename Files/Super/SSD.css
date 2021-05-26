@@ -6,6 +6,10 @@
 .container-3baos1:before , .container-3baos1:after {
   display: none;
 }
+/* Hide Add friend button due to it being in the profile popup model */
+.colorDefault-2K3EoJ[id="user-context-add-friend"] {
+  display: none;
+}
 /* Moving the Spotify Player to the left */
 .spotify-in-discord-player {
     transition: 0.5s;
