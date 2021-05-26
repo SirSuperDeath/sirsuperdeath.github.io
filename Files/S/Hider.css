@@ -39,10 +39,18 @@
 .colorDefault-2K3EoJ[id="user-context-invite-to-server"] {
       display: none;
   }
+/* Hide Add note button on user right click*/
+.colorDefault-2K3EoJ[id="user-context-note"] {
+  display: none;
+}
 /* Hide Call user button on user right click */
   .colorDefault-2K3EoJ[id="user-context-call"] {
       display: none;
   }
+/* Hide Call user button on user right click */
+.colorDefault-2K3EoJ[id="user-context-block"] {
+  display: none;
+}
 /* Hide Discord logo */
 .wordmarkWindows-1v0lYD svg {display: none;}
 /* Show Discord, even when you're offline */
