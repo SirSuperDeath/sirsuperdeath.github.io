@@ -35,6 +35,10 @@
 .guildSeparator-3s64Iy {
     display: none;
   }
+/* Remove Stage Discovery */
+.channel-2QD9_O[href="/discovery"] {
+  display: none;
+}
 /* Hide Invite to server button on user right click */
 .colorDefault-2K3EoJ[id="user-context-invite-to-server"] {
       display: none;
