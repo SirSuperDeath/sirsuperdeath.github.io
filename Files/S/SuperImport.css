@@ -5,12 +5,16 @@ PS if your looking at this your awesome and wash your hands and stay safe OWO :)
 @import "credits.css";
 @import "channelicons.css";
 @import "settingsicons.css";
-/* Home Icon */
-#app-mount .wrapper-1BJsBx .childWrapper-anI2G9 {
-  background: url("https://i.imgur.com/233d55Y.gif") center/cover no-repeat;
-}
+
+/* Home Icon.*/
 .homeIcon-FuNwkv {
-  display: none;
+  background-image: url(https://i.imgur.com/233d55Y.gif);
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+}
+.homeIcon-FuNwkv path {
+  fill: none;
 }
 /* Search Hide until hover */
 .search-2oPWTC:not(.open-6_Y_aH) .searchBar-3dMhjb { width: 27px; transition: 0.25s; background-color: transparent;}
