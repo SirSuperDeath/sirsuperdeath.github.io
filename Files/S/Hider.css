@@ -11,6 +11,10 @@
   .channelTextArea-rNsIhG .buttonContainer-28fw2U .button-38aScr {
       display:block !important;
   }
+ /* Remove anoyying light up avatar when talking */
+ .avatarSpeaking-2c8-9i {
+  display: none;
+}
 /* Hide Active and show on hover*/
 .nowPlayingColumn-2sl4cE {
   position: relative;
