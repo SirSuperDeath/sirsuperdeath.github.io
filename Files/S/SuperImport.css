@@ -5,10 +5,9 @@ PS if your looking at this your awesome and wash your hands and stay safe OWO :)
 @import "credits.css";
 @import "channelicons.css";
 @import "settingsicons.css";
-
 /* Home Icon.*/
 .homeIcon-FuNwkv {
-  background-image: url(https://i.imgur.com/233d55Y.gif);
+  background-image: url(https://i.imgur.com/233d55Y.gif) !important;
   background-size: contain;
   height: 100%;
   width: 100%;
@@ -27,7 +26,6 @@ PS if your looking at this your awesome and wash your hands and stay safe OWO :)
   height: 36px;
   opacity: 1;
 }
-
 /* Search Hide until hover */
 .search-2oPWTC:not(.open-6_Y_aH) .searchBar-3dMhjb { width: 27px; transition: 0.25s; background-color: transparent;}
 .search-2oPWTC:not(.open-6_Y_aH):hover .searchBar-3dMhjb { width: 240px; transition: 0.25s; background-color: rgba(22, 22, 22, 0.774); ;}
