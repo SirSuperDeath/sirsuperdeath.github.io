@@ -13,22 +13,17 @@ PS if your looking at this your awesome and wash your hands and stay safe OWO :)
 .homeIcon-FuNwkv {
   display: none;
 }
-/* Home Icon.*
-.homeIcon-FuNwkv {
-  background-image: url(https://i.imgur.com/233d55Y.gif) !important;
-  background-size: contain;
-  height: 100%;
-  width: 100%;
-}
-.homeIcon-FuNwkv path {
-  fill: none;
-}
 /* Collapsing Voice Channel Panel */
 .panels-j1Uci_ .actionButtons-14eAc_ {
   height: 0px;
   opacity: 0;
   transition: all 0.25s ease-out;
 }
+/* changes the color of the context menu and makes it a more appropriate size */
+.wrapper-2aW0bm {
+  transform: scale(0.6)
+}
+.container-3npvBV .wrapper-2aW0bm {background-color: rgba(0,0,0,0.4);}
 
 .panels-j1Uci_:hover .actionButtons-14eAc_ {
   height: 36px;
@@ -104,11 +99,7 @@ div:not(:hover)>.members-1998pB>div{
     padding-top: 0px;
     padding-bottom: 0px;
   }
-/* changes the color of the context menu and makes it a more appropriate size */
-  .wrapper-2aW0bm {
-    transform: scale(0.6)
-  }
-  .container-3npvBV .wrapper-2aW0bm {background-color: rgba(0,0,0,0.4);}
+
 /*  Talking Blue with blue glow */ 
   .wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9, .wrapper-1BJsBx:hover .childWrapper-anI2G9 {
     background: var(--main-color) var(--home-icon) var(--home-position)/var(--home-size);
