@@ -5,7 +5,15 @@ PS if your looking at this your awesome and wash your hands and stay safe OWO :)
 @import "credits.css";
 @import "channelicons.css";
 @import "settingsicons.css";
-/* Home Icon.*/
+
+/* Home Icon */
+#app-mount .wrapper-1BJsBx .childWrapper-anI2G9 {
+  background: url("https://i.imgur.com/233d55Y.gif") center/cover no-repeat;
+}
+.homeIcon-FuNwkv {
+  display: none;
+
+/* Home Icon.*
 .homeIcon-FuNwkv {
   background-image: url(https://i.imgur.com/233d55Y.gif) !important;
   background-size: contain;
