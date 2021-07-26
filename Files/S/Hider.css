@@ -32,9 +32,9 @@
   margin-left: 0;
   transition: .3s all ease-out;}
 /* Noise Suppression Button Hider*/
-    [aria-label="Noise Suppression powered by Krisp"] {
-      display: none; 
-    }
+[aria-label="Noise suppression powered by Krisp"] {
+  display: none;
+}
 /* Hide the live text to just be a Dot (due to the text taking up too much space)*/
   .liveSmall-1dy2uA {
     font-size: 0px;
