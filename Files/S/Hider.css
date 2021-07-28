@@ -66,24 +66,26 @@
 
 /* Hide Discord logo */
 .wordmarkWindows-1v0lYD svg {display: none;}
-/* Show Discord, even when you're offline */
+
 .container-16j22k {
+  /* You may need to adjust this */
+  --translate-px: -389px;
+  height: 1px;
+  transform: translateY(var(--translate-px));
   background: transparent;
-  pointer-events: none;
-}
-.container-16j22k * {
-  display: none;
 }
 .container-16j22k::before {
-  content: 'You\'ve gone offline';
-  display: block;
-  bottom: 24px;
-  right: 24px;
+  content: 'You are offline!';
+  top: 0.5px;
   position: absolute;
-  padding: 8px 16px;
-  background-color: #f04747;
-  border-radius: 4px;
-  color: #fff;
+  font-weight: 900;
+  font-size: smaller;
+  color: var(--info-danger-foreground);
+  text-transform: uppercase;
+}
+.container-16j22k > .content-1-zrf2,
+.container-16j22k > .problems-3mgf6w {
+  display: none;
 }
 /* Hiding the emote icon and gif icon behind the send file icon untill you hover over it*/
 .buttons-3JBrkn {opacity: 0; transition: opacity 0.1s;}
