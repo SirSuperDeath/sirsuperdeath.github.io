@@ -1,11 +1,8 @@
-/* For other Fixes such as Hide Memberlist , Servers etc they are now located in https://raw.githubusercontent.com/SuperDeath/superdeath.github.io/master/README.md
-PS if your looking at this your awesome and wash your hands and stay safe OWO :) */
+/* For other Fixes such as Hide Memberlist , Servers etc they are now located in https://raw.githubusercontent.com/SuperDeath/superdeath.github.io/master/README.md*/
 @import "Hider.css";
 @import "NitroHider.css";
 @import "credits.css";
-@import "channelicons.css";
 @import "settingsicons.css";
-
 /* Home Icon */
 #app-mount .wrapper-1BJsBx .childWrapper-anI2G9 {
   background: url("https://i.imgur.com/233d55Y.gif") center/cover no-repeat;
