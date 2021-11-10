@@ -11,10 +11,6 @@
   .channelTextArea-rNsIhG .buttonContainer-28fw2U .button-38aScr {
       display:block !important;
   }
-/* Hide Stickers button */ 
-.stickerButton-3OEgwj {
-  display: none;
-}
  /* Remove anoyying light up avatar when talking */
  .avatarSpeaking-2c8-9i {
   display: none;

@@ -10,6 +10,10 @@
 .colorDefault-2K3EoJ[id="user-context-add-friend"] {
   display: none;
 }
+/* Hide Stickers button */ 
+.stickerButton-3OEgwj {
+  display: none;
+}
 /* Moving the Spotify Player to the left */
 .spotify-in-discord-player {
   transition: 0.5s;
