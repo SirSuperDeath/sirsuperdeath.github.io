@@ -11,18 +11,18 @@
 /* Import Fixes */ 
 
 /* Home Icon */
-#app-mount .listItemWrapper-3X98Pc .childWrapper-anI2G9 {
+#app-mount .listItemWrapper-3X98Pc .childWrapper-1j_1ub {
   background: url("https://i.imgur.com/233d55Y.gif") center/cover no-repeat;
 }
 .homeIcon-tEMBK1 {
   display: none;
 }
 /* Animated Ping Icon */ 
-.ping-2NgC8E {
+.ping-2IpLcU {
   width: 18px;
   height: 18px
   }
-  .ping-2NgC8E {
+  .ping-2IpLcU {
   transform-origin: bottom;
   rx:0;
   animation: ping-counter 2s linear infinite
@@ -48,18 +48,18 @@
   }
   }
 /* removes the stupid background on messages over hover */
-.mouse-mode .message-2qnXI6:hover {
+.mouse-mode .message-2CShn3:hover {
   background-color: transparent;
 }
 
 /* makes the unread thing in the center instead of the right, also rounds it 
-.unreadPill-2HyYtt {
+.unreadPill-3nEWYM {
   left: 45%;
   right: 50%;
   border-radius: 10px;
 }
 /* gets rid of the pointy tip on the unread bar 
-.unreadPillCap-3_K2q2 {
+.unreadPillCap-2-iI4h {
   display: none;
 }
 /* go back to the regular spacing between messages */
@@ -68,23 +68,23 @@
   padding-bottom: 0px;
 }
 /* changes the color of the context menu and makes it a more appropriate size */
-.wrapper-2aW0bm {
+.wrapper-2vIMkT {
   transform: scale(0.6)
 }
-.container-3npvBV .wrapper-2aW0bm {background-color: rgba(0,0,0,0.4);}
+.container-2gUZhU .wrapper-2vIMkT {background-color: rgba(0,0,0,0.4);}
 /*Gift Button Hider Snippet*/
-.channelTextArea-rNsIhG .buttons-3JBrkn .button-38aScr[tabindex="0"]:first-child,
-.channelTextArea-rNsIhG .buttons-3JBrkn .buttonWrapper-1ZmCpA + .buttonWrapper-1ZmCpA[tabindex="0"] {
+.channelTextArea-1FufC0 .buttons-uaqb-5 .button-38aScr[tabindex="0"]:first-child,
+.channelTextArea-1FufC0 .buttons-uaqb-5 .buttonWrapper-3YFQGJ + .buttonWrapper-3YFQGJ[tabindex="0"] {
     display:none;
 }
-.channelTextArea-rNsIhG .buttonContainer-28fw2U .button-38aScr {
+.channelTextArea-1FufC0 .buttonContainer-2lnNiN .button-38aScr {
     display:block !important;
 }
 .theme-dark #MemberCount {
     background-color: transparent;
 }
 /*  Talking Blue */ 
-.wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9, .wrapper-1BJsBx:hover .childWrapper-anI2G9 {
+.wrapper-3kah-n.selected-1Drb7Z .childWrapper-1j_1ub, .wrapper-3kah-n:hover .childWrapper-1j_1ub {
   background: var(--main-color) var(--home-icon) var(--home-position)/var(--home-size);
 }.avatarSpeaking-1wJCNq {
 box-shadow: none;
@@ -109,7 +109,7 @@ left: -5px;
 }
 
 /* Help Button Hider*/
-.toolbar-1t6TWx .iconWrapper-2OrFZ1:last-child{display: none}
+.toolbar-3_r2xA .iconWrapper-2awDjA:last-child{display: none}
 
 /*
  * Enlarges reactions on hover 
@@ -124,14 +124,14 @@ left: -5px;
 }
 
 /* Remove the discord icon */
-.wordmark-2iDDfm {
+.wordmark-2u86JB {
   display: none;
 }
-.wordmark-2iDDfm:after {
+.wordmark-2u86JB:after {
   content: "4";
   color: #ffff;
 }
-.wordmark-2iDDfm > svg {
+.wordmark-2u86JB > svg {
   display: none;
 }
 /* Some other fixes themeing of the member screening screen */
@@ -139,18 +139,18 @@ left: -5px;
 background-color: rgba(0,0,0,0.4);
 inner box
 background-color: rgba(255,255,255,0.05); */
-.enableContainer-2DIT9Q {
+.enableContainer-1J91Aq {
   background-color: rgba(0,0,0,0.4);
 }
-.settingsFormItem-103g1I {
+.settingsFormItem-25zW3t {
   background-color: rgba(0,0,0,0.4);
 }
-.settingsFormFieldWrapper-3Y77Pr {
+.settingsFormFieldWrapper-U99c9i {
   background-color: rgba(255,255,255,0.05);
 }
 /* if you dont want to see something just remove the */
 /*Member list hider*
-.membersWrap-2h-GB4:before {
+.membersWrap-3NUR2t:before {
   content: 'Members';
   color: #fff;
   line-height: 20px;
@@ -168,17 +168,17 @@ background-color: rgba(255,255,255,0.05); */
   transform: rotate(270deg);
 }
 
-.membersWrap-2h-GB4:hover:before {
+.membersWrap-3NUR2t:hover:before {
   background-color: var(--hover-color);
 }
 
-.membersWrap-2h-GB4 {
+.membersWrap-3NUR2t {
   left: var(--members-width);
   margin-left: calc(var(--members-width) * -1);
   transition: .4s all ease-out;
 }
 
-.membersWrap-2h-GB4:hover{
+.membersWrap-3NUR2t:hover{
   left: 0;
 }
 
@@ -206,7 +206,7 @@ nav.wrapper-1Rf91z:hover ~ div.da-base{
 }
 
 /* Channel Hider *
-.sidebar-2K8pFh{
+.sidebar-1tnWFu{
 min-width:10px!important;
 max-width:240px!important;
 width:20px;
@@ -214,20 +214,20 @@ transition: all 1s;
 opacity: 0;
 }
 
-.sidebar-2K8pFh:hover{
+.sidebar-1tnWFu:hover{
 width:320px;
 transition: all 1s;
 opacity: 1;
 }
 
 /* Activity hider*/
-.nowPlayingColumn-2sl4cE {
+.nowPlayingColumn-1eCBCN {
   position: relative;
   left: 350px ;
   opacity: 1;
   margin-left: -350px;
   transition: .7s all ease-out;}
-.nowPlayingColumn-2sl4cE:hover {
+.nowPlayingColumn-1eCBCN:hover {
   left: 0 ;
   opacity: 1;
   margin-left: 0;
