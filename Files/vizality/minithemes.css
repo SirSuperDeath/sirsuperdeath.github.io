@@ -1,11 +1,11 @@
 /* Vizality CSS/Theme Addons */
 /* Home Icon Vizality (Code by SirSuperDeath) */
-#app-mount .listItemWrapper-3X98Pc .childWrapper-anI2G9 {
+#app-mount .listItemWrapper-3X98Pc .childWrapper-1j_1ub {
 	background: url("https://i.imgur.com/i333IYr.png") center/cover no-repeat;
     background-size: 130%;
     transition: 0.3s ease-in-out;
   }
-#app-mount .listItemWrapper-3X98Pc .childWrapper-anI2G9:hover {
+#app-mount .listItemWrapper-3X98Pc .childWrapper-1j_1ub:hover {
 	background: url("https://i.imgur.com/Ekke9TY.gif") center/cover no-repeat;
     background-size: 135%;
     transition: 0.3s ease-in-out;
@@ -38,13 +38,13 @@
 .spotify-in-discord-player {
   background-color: rgba(0, 0, 0, 0.972);
 }
-.panels-j1Uci_ .container-3baos1 {
+.panels-3wFtMD .container-YkUktl {
     border: 0;
 }
-.spotify-in-discord-player .avatarWrapper-2yR4wp {
+.spotify-in-discord-player .avatarWrapper-1B9FTW {
     margin-left: 12px;
     transition: 0.5s;
 }
-.spotify-in-discord-player:hover .avatarWrapper-2yR4wp {
+.spotify-in-discord-player:hover .avatarWrapper-1B9FTW {
     margin-left: 0px;
 }

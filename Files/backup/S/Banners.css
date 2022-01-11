@@ -7,11 +7,11 @@
   /*color of the shadow at the bottom of the banner, this color will depend on your theme, coming with this snippet is the color var for devilbro's discord recolor*
       --server-banner-shadow: var(--background-secondary);
   }
-  .container-1NXEtd[aria-label*="Wolves of Jonai"] .header-3OsQeK {
+  .container-3w7J-x[aria-label*="Wolves of Jonai"] .header-2V-4Sw {
     height: 24px;
   }
   
-  .container-1NXEtd[aria-label*="Wolves of Jonai"] .scroller-1ox3I2 div.content-2a4AW9 > div:first-child {
+  .container-3w7J-x[aria-label*="Wolves of Jonai"] .scroller-RmtA4e div.content-3YMskv > div:first-child {
       width: 100%;
       height: 106px !important;
       box-shadow: inset  0 -20px 20px -20px var(--server-banner-shadow);
@@ -25,11 +25,11 @@
     /*color of the shadow at the bottom of the banner, this color will depend on your theme, coming with this snippet is the color var for devilbro's discord recolor*
         --server-banner-shadow: var(--background-secondary);
     }
-    .container-1NXEtd[aria-label*="WOJ High Command /Supers Safe Space"] .header-3OsQeK {
+    .container-3w7J-x[aria-label*="WOJ High Command /Supers Safe Space"] .header-2V-4Sw {
       height: 24px;
     }
     
-    .container-1NXEtd[aria-label*="WOJ High Command /Supers Safe Space"] .scroller-1ox3I2 div.content-2a4AW9 > div:first-child {
+    .container-3w7J-x[aria-label*="WOJ High Command /Supers Safe Space"] .scroller-RmtA4e div.content-3YMskv > div:first-child {
         width: 100%;
         height: 106px !important;
         box-shadow: inset  0 -20px 20px -20px var(--server-banner-shadow);
@@ -65,13 +65,13 @@
 
 /* Old banners */
 /* WOJ Banner */
-.container-1NXEtd[aria-label*="Wolves of Jonai"] .header-3OsQeK {
+.container-3w7J-x[aria-label*="Wolves of Jonai"] .header-2V-4Sw {
     box-shadow: none;
   }
-  .clickable-vvKY2q .header-3OsQeK {
+  .clickable-25tGDB .header-2V-4Sw {
     box-shadow: none;
   }
-  .container-1NXEtd[aria-label*="Wolves of Jonai"] .positionedContainer-W9XtGp {
+  .container-3w7J-x[aria-label*="Wolves of Jonai"] .positionedContainer-3LNR6L {
     opacity: 100%;
     margin-top: -48px;
     width: 100%;
@@ -84,17 +84,17 @@
     background-size: cover;
   }
   
-  .container-1-ERn5 {
+  .container-1taM1r {
   background: transparent !important;
   }
 /* WOJ SS Banner */
-.container-1NXEtd[aria-label*="WOJ High Command /Supers Safe Space"] .header-3OsQeK {
+.container-3w7J-x[aria-label*="WOJ High Command /Supers Safe Space"] .header-2V-4Sw {
     box-shadow: none;
   }
-  .clickable-vvKY2q .header-3OsQeK {
+  .clickable-25tGDB .header-2V-4Sw {
     box-shadow: none;
   }
-  .container-1NXEtd[aria-label*="WOJ High Command /Supers Safe Space"] .positionedContainer-W9XtGp {
+  .container-3w7J-x[aria-label*="WOJ High Command /Supers Safe Space"] .positionedContainer-3LNR6L {
     opacity: 100%;
     margin-top: -48px;
     width: 100%;
@@ -107,12 +107,12 @@
     background-size: cover;
   }
 /* Important CSS */
-.container-1-ERn5 {
+.container-1taM1r {
   background: transparent !important;
 }
 /* Both should be sorted now */
 /* Moving the NEw Unreads popout lower to match the banners being there */
-.container-1qIct8{
+.container-35XQWE{
   width: 230px;
   padding-left: 3px;
   top: 100px;

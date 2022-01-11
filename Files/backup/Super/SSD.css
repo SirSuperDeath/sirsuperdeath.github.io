@@ -1,0 +1,102 @@
+/** this is my own changes i use id say dont use this **/
+
+
+
+/* Remove grayscale filter on emotes you cant use */
+.emojiItem-14v6tW.emojiItemDisabled-1FvFuF { filter: none;}
+/* Remove CV WaterMark */
+.container-3baos1:before , .container-3baos1:after {
+  display: none;
+}
+/* Hide Add friend button due to it being in the profile popup model */
+.colorDefault-2K3EoJ[id="user-context-add-friend"] {
+  display: none;
+}
+/* Hide Stickers button */ 
+.stickerButton-3OEgwj {
+  display: none;
+}
+/* Moving the Spotify Player to the left */
+.spotify-in-discord-player {
+  transition: 0.5s;
+  border-top-right-radius: 8px;
+  position: fixed !important;
+  z-index: 1;
+  bottom: 0.5px;
+    left: 0px;
+  background-color: rgba(17, 17, 17, 0.13);
+    overflow: hidden;
+    width: 72px;
+}
+.spotify-in-discord-player:hover {
+    width: 240px;
+}
+.spotify-in-discord-player-seek-bar-progress {
+    background-color: var(--main-color) !important;
+}
+.spotify-in-discord-player-seek-bar {
+  background-color: var(--background-overlay);
+}
+.spotify-in-discord-player {
+  background-color: rgba(0, 0, 0, 0.972);
+}
+.panels-j1Uci_ .container-3baos1 {
+    border: 0;
+}
+.spotify-in-discord-player .avatarWrapper-2yR4wp {
+    margin-left: 12px;
+    transition: 0.5s;
+}
+.spotify-in-discord-player:hover .avatarWrapper-2yR4wp {
+    margin-left: 0px;
+}
+/* Removing Annoying things such as Separators in the 
+settings page and Mark Unread and speak msg buttons */
+#message-mark-unread,
+#message-tts {
+    display: none;    
+}
+.separator-gCa7yv {
+    display: none;
+}
+/*Hide Stickers*/
+.message-2qnXI6 .assetWrapper-3GNt0z {
+  height: auto !important;
+  width: auto !important;
+}
+.message-2qnXI6 .assetWrapper-3GNt0z:active {
+  height: 160px !important;
+  width: 160px !important;
+}
+.message-2qnXI6 .assetWrapper-3GNt0z:after {
+  color: var(--text-link);
+  content: 'blocked sticker - Show Sticker';
+}
+.message-2qnXI6 .assetWrapper-3GNt0z:hover::after {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.message-2qnXI6 .assetWrapper-3GNt0z:active::after {
+  content: none;
+}
+.message-2qnXI6 .assetWrapper-3GNt0z .pngImage-33yLRP,
+.message-2qnXI6 .assetWrapper-3GNt0z .lottieCanvas-1W7L-f {
+  display: none;
+}
+.message-2qnXI6 .assetWrapper-3GNt0z:active .pngImage-33yLRP,
+.message-2qnXI6 .assetWrapper-3GNt0z:active .lottieCanvas-1W7L-f {
+  display: block;
+}
+/* Hide Sticker Autocomplete */
+.emojiStickersDivider-3Q5Opa ~ .autocompleteRowVertical-q1K4ky,
+.emojiStickersDivider-3Q5Opa {
+display: none;
+}
+/* Removes Add a server and desco buttons */
+.circleButtonMask-1_597P.wrapper-25eVIn {
+  display: none;
+}
+/* remove icons from channel names */
+.children-3rEycc {
+    display: none;
+  }

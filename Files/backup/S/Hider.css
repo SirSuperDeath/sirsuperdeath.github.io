@@ -1,28 +1,28 @@
 /* Hiding Things Area*/
 /* Hides Textbox when you don't have permission to talk in the channel */
-.channelTextAreaDisabled-1p2fQv > div {
+.channelTextAreaDisabled-8rmlrp > div {
     display: none
   }
 /*Gift Button Hider Snippet*/
-  .channelTextArea-1FufC0 .buttons-uaqb-5 .button-38aScr[tabindex="0"]:first-child,
-  .channelTextArea-1FufC0 .buttons-uaqb-5 .buttonWrapper-3YFQGJ + .buttonWrapper-3YFQGJ[tabindex="0"] {
+  .channelTextArea-rNsIhG .buttons-3JBrkn .button-38aScr[tabindex="0"]:first-child,
+  .channelTextArea-rNsIhG .buttons-3JBrkn .buttonWrapper-1ZmCpA + .buttonWrapper-1ZmCpA[tabindex="0"] {
       display:none;
   }
-  .channelTextArea-1FufC0 .buttonContainer-2lnNiN .button-38aScr {
+  .channelTextArea-rNsIhG .buttonContainer-28fw2U .button-38aScr {
       display:block !important;
   }
  /* Remove anoyying light up avatar when talking */
- .avatarSpeaking-33RRJU {
+ .avatarSpeaking-2c8-9i {
   display: none;
 }
 /* Hide Active and show on hover*/
-.nowPlayingColumn-1eCBCN {
+.nowPlayingColumn-2sl4cE {
   position: relative;
   left: 350px ;
   opacity: 1;
   margin-left: -350px;
   transition: .3s all ease-out;}
-.nowPlayingColumn-1eCBCN:hover {
+.nowPlayingColumn-2sl4cE:hover {
   left: 0 ;
   opacity: 1;
   margin-left: 0;
@@ -32,7 +32,7 @@
   display: none;
 }
 /* Hide the live text to just be a Dot (due to the text taking up too much space)*/
-  .liveSmall-1Urjcy {
+  .liveSmall-1dy2uA {
     font-size: 0px;
   }
 /* Remove Seperator between Home and Guilds */
@@ -40,37 +40,37 @@
     display: none;
   }
 /* Remove Stage Discovery */
-.channel-1Shao0[href="/discovery"] {
+.channel-2QD9_O[href="/discovery"] {
   display: none;
 }
 /* Hide Invite to server button on user right click */
-.colorDefault-CDqZdO[id="user-context-invite-to-server"] {
+.colorDefault-2K3EoJ[id="user-context-invite-to-server"] {
       display: none;
   }
 /* Hide Add note button on user right click*/
-.colorDefault-CDqZdO[id="user-context-note"] {
+.colorDefault-2K3EoJ[id="user-context-note"] {
   display: none;
 }
 /* Hide Call user button on user right click */
-  .colorDefault-CDqZdO[id="user-context-call"] {
+  .colorDefault-2K3EoJ[id="user-context-call"] {
       display: none;
   }
 /* Hide Call user button on user right click */
-.colorDefault-CDqZdO[id="user-context-block"] {
+.colorDefault-2K3EoJ[id="user-context-block"] {
   display: none;
 }
 
 /* Hide Discord logo */
-.wordmarkWindows-2dq6rw svg {display: none;}
+.wordmarkWindows-1v0lYD svg {display: none;}
 
-.container-2RRFHK {
+.container-16j22k {
   /* You may need to adjust this */
   --translate-px: -389px;
   height: 1px;
   transform: translateY(var(--translate-px));
   background: transparent;
 }
-.container-2RRFHK::before {
+.container-16j22k::before {
   content: 'You are offline!';
   top: 0.5px;
   position: absolute;
@@ -79,34 +79,34 @@
   color: var(--info-danger-foreground);
   text-transform: uppercase;
 }
-.container-2RRFHK > .content-3AIQZv,
-.container-2RRFHK > .problems-CvGwpb {
+.container-16j22k > .content-1-zrf2,
+.container-16j22k > .problems-3mgf6w {
   display: none;
 }
 /* Hiding the emote icon and gif icon behind the send file icon untill you hover over it*/
-.buttons-uaqb-5 {opacity: 0; transition: opacity 0.1s;}
-.channelTextArea-1FufC0:hover .buttons-uaqb-5 {opacity: 1.0;}
+.buttons-3JBrkn {opacity: 0; transition: opacity 0.1s;}
+.channelTextArea-rNsIhG:hover .buttons-3JBrkn {opacity: 1.0;}
 
-.attachWrapper-3slhXI {order:1; margin-left:9px;}
-.attachButton-_ACFSu {padding-right:0px}
+.attachWrapper-2TRKBi {order:1; margin-left:9px;}
+.attachButton-2WznTc {padding-right:0px}
 
-.uploadModal-2ie9O_ .buttons-uaqb-5 {opacity: 1.0;}
+.uploadModal-2ifh8j .buttons-3JBrkn {opacity: 1.0;}
 
 /* Doing this just incase they change the class again */
 [aria-label="Help"] {
   display: none; 
 }
 /* Hide Mute/Deafen buttons when not in a voice call (Original from Zerthox) 
-  .container-YkUktl .button-12Fmur:first-child,
-  .container-YkUktl .button-12Fmur:nth-child(2),
-  .container-YkUktl .button-12Fmur:nth-child(3)::before {
+  .container-3baos1 .button-14-BFJ:first-child,
+  .container-3baos1 .button-14-BFJ:nth-child(2),
+  .container-3baos1 .button-14-BFJ:nth-child(3)::before {
       display:none;
   }
-  .container-1zzFcN + .container-YkUktl .button-12Fmur:first-child,
-  .container-1zzFcN + .container-YkUktl .button-12Fmur:nth-child(2),
-  .container-1zzFcN + .container-YkUktl .button-12Fmur:nth-child(3)::before {
+  .container-1giJp5 + .container-3baos1 .button-14-BFJ:first-child,
+  .container-1giJp5 + .container-3baos1 .button-14-BFJ:nth-child(2),
+  .container-1giJp5 + .container-3baos1 .button-14-BFJ:nth-child(3)::before {
       display: flex;
   }
 */
 /* Hide Picture in Picture Streaming (if you like to see them let me know and ill move it to a diff CSS*/
-/* .pictureInPictureWindow-3ms5Zy{display:none;}
+/* .pictureInPictureWindow-1B5qSe{display:none;}

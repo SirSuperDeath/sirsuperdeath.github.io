@@ -1,29 +1,29 @@
 /* Settings Icons */
 /* Accessibility */
-.standardSidebarView-E9Pc3j .side-2ur1Qk .item-3XjbnG[aria-controls="Accessibility-tab"]::before {
+.standardSidebarView-3F1I7i .side-8zPYf6 .item-PXvHYJ[aria-controls="Accessibility-tab"]::before {
 	background: url("https://raw.githubusercontent.com/KillYoy/DiscordNight/master/Icons/SVG/Accessibility.svg");
 }
 /* BetterDiscord Icons */
-.standardSidebarView-E9Pc3j .side-2ur1Qk .bd-settings-tab::before {
+.standardSidebarView-3F1I7i .side-8zPYf6 .bd-settings-tab::before {
 	background: url("https://raw.githubusercontent.com/KillYoy/DiscordNight/master/Icons/SVG/BetterDiscord.svg");
 }
-.standardSidebarView-E9Pc3j .side-2ur1Qk .bd-emotes-tab::before {
+.standardSidebarView-3F1I7i .side-8zPYf6 .bd-emotes-tab::before {
 	background: url("https://raw.githubusercontent.com/KillYoy/DiscordNight/master/Icons/SVG/Emoji.svg");
 }
-.standardSidebarView-E9Pc3j .side-2ur1Qk .bd-plugins-tab::before {
+.standardSidebarView-3F1I7i .side-8zPYf6 .bd-plugins-tab::before {
 	background: url("https://raw.githubusercontent.com/KillYoy/DiscordNight/master/Icons/SVG/Plugins.svg");
 }
-.standardSidebarView-E9Pc3j .side-2ur1Qk .bd-themes-tab::before {
+.standardSidebarView-3F1I7i .side-8zPYf6 .bd-themes-tab::before {
 	background: url("https://raw.githubusercontent.com/KillYoy/DiscordNight/master/Icons/SVG/Theme.svg");
 }
-.standardSidebarView-E9Pc3j .side-2ur1Qk .bd-customcss-tab::before {
+.standardSidebarView-3F1I7i .side-8zPYf6 .bd-customcss-tab::before {
 	background: url("https://raw.githubusercontent.com/KillYoy/DiscordNight/master/Icons/SVG/Code.svg");
 }
 /* Plugin Repo */
-.sidebarRegionScroller-FXiQOh .item-3XjbnG[aria-controls="pluginrepo-tab"]::before {
+.sidebarRegionScroller-3MXcoP .item-PXvHYJ[aria-controls="pluginrepo-tab"]::before {
 	background: url("https://raw.githubusercontent.com/KillYoy/DiscordNight/master/Icons/SVG/Plugins.svg");
 }
 /* Theme Repo */
-.sidebarRegionScroller-FXiQOh .item-3XjbnG[aria-controls="themerepo-tab"]::before {
+.sidebarRegionScroller-3MXcoP .item-PXvHYJ[aria-controls="themerepo-tab"]::before {
 	background: url("https://raw.githubusercontent.com/KillYoy/DiscordNight/master/Icons/SVG/Theme.svg");
 }

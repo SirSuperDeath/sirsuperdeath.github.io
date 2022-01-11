@@ -11,7 +11,7 @@
     background-position: 0 0;}
     50% {
     background-position: 100% 0;}}
-  .markup-eYLPri .messageContent-2t3eCI {
+  .markup-2BOw-j .messageContent-2qWWxC {
     background-color: rgba(0, 0, 0, 0.1) !important; 
     background-image: linear-gradient(to right, #ff000050, #FF8C0030, #FFD70030, #00FF0030, #00BFFF30 , #BA55D330, #ff000050) !important;
     background-size: 400% 100% !important;
@@ -39,7 +39,7 @@
     animation: rainbow_animation 20s ease-in-out infinite !important;
   }
 
-/* .scrollableContainer-15eg7h:focus-within {border: 2px solid red /*
+/* .scrollableContainer-2NUZem:focus-within {border: 2px solid red /*
 
     /* Rainbow Folders */
   @keyframes rainbow_animation {
@@ -47,14 +47,14 @@
     border-position: 0 0;}
     50% {
     border-position: 100% 0;}}
-    .scrollableContainer-15eg7h:focus-within {    
+    .scrollableContainer-2NUZem:focus-within {    
     background: none;
     background-image-slice: linear-gradient(to right, #ff000050, #FF8C0030, #FFD70030, #00FF0030, #00BFFF30 , #BA55D330, #ff000050) !important;
     background-size: 400% 100% !important;
     animation: rainbow_animation 20s ease-in-out infinite !important;
   }
 /* Rainbow Text */   
-  .markup-eYLPri {
+  .markup-2BOw-j {
     animation: rainbow_animation linear 10s infinite;
     } 
     
@@ -66,12 +66,12 @@
       100% {color: red;}
     }
 /* Server selected pill background */
-.pill-1z4sAY.wrapper-z5ab_q .item-2LIpTv { /* Pride Month Look */
+.pill-1z4sAY.wrapper-sa6paO .item-2hkk8m { /* Pride Month Look */
   background: url('https://i.imgur.com/SaGlnDV.png');
   background-size: 40px;
 }
 /*pride Banner*/
-.banner-1YaD3N {
+.banner-2QYc2d {
   background: url('https://i.imgur.com/D2fsL3a.png');
 }
 

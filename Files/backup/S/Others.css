@@ -1,21 +1,21 @@
 /* Member List Slide in and hide a litle when not hovered on*/
-.membersWrap-3NUR2t{
+.membersWrap-2h-GB4{
     min-width: unset;
     flex-basis: auto !important;
   }
-  .members-3WRCEx{
+  .members-1998pB{
     max-width: 65px;
     min-width: 65px;
     transition: .3s ease;
   }
-  .members-3WRCEx:hover{
+  .members-1998pB:hover{
     max-width: 240px;
     min-width: 240px;
   }
-  div:not(:hover)>.membersGroup-2eiWxl{
+  div:not(:hover)>.membersGroup-v9BXpm{
     height: 0px;
     padding: 0%;
   }
-  div:not(:hover)>.members-3WRCEx>div{
+  div:not(:hover)>.members-1998pB>div{
     padding-top: 10px;
   }

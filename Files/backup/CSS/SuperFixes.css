@@ -1,0 +1,239 @@
+/**
+ * @name SuperOwO
+ * @author SirSuperDeath#8930
+ * @version 1.2.2
+ * @description Trying to Fix some things and make stuff look better.
+ * @website https://twitch.tv/SirSuperDeath
+ * @source https://github.com/SuperDeath/Discord-Themes
+ * @invite 6CzTtP5 
+*/
+
+/* Import Fixes */ 
+
+/* Home Icon */
+#app-mount .listItemWrapper-3X98Pc .childWrapper-anI2G9 {
+  background: url("https://i.imgur.com/233d55Y.gif") center/cover no-repeat;
+}
+.homeIcon-tEMBK1 {
+  display: none;
+}
+/* Animated Ping Icon */ 
+.ping-2NgC8E {
+  width: 18px;
+  height: 18px
+  }
+  .ping-2NgC8E {
+  transform-origin: bottom;
+  rx:0;
+  animation: ping-counter 2s linear infinite
+  }
+  
+  .active-2h1NLh:nth-child(2) {
+  animation-delay: .5s
+  }
+  
+  .active-2h1NLh:nth-child(3) {
+  animation-delay: 1s
+  }
+  
+  @keyframes ping-counter {
+  0% {
+    transform: scaleY(1)
+  }
+  50% {
+    transform: scaleY(.5)
+  }
+  100% {
+    transform: scaleY(1)
+  }
+  }
+/* removes the stupid background on messages over hover */
+.mouse-mode .message-2qnXI6:hover {
+  background-color: transparent;
+}
+
+/* makes the unread thing in the center instead of the right, also rounds it 
+.unreadPill-2HyYtt {
+  left: 45%;
+  right: 50%;
+  border-radius: 10px;
+}
+/* gets rid of the pointy tip on the unread bar 
+.unreadPillCap-3_K2q2 {
+  display: none;
+}
+/* go back to the regular spacing between messages */
+.container-3FojY8 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+/* changes the color of the context menu and makes it a more appropriate size */
+.wrapper-2aW0bm {
+  transform: scale(0.6)
+}
+.container-3npvBV .wrapper-2aW0bm {background-color: rgba(0,0,0,0.4);}
+/*Gift Button Hider Snippet*/
+.channelTextArea-rNsIhG .buttons-3JBrkn .button-38aScr[tabindex="0"]:first-child,
+.channelTextArea-rNsIhG .buttons-3JBrkn .buttonWrapper-1ZmCpA + .buttonWrapper-1ZmCpA[tabindex="0"] {
+    display:none;
+}
+.channelTextArea-rNsIhG .buttonContainer-28fw2U .button-38aScr {
+    display:block !important;
+}
+.theme-dark #MemberCount {
+    background-color: transparent;
+}
+/*  Talking Blue */ 
+.wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9, .wrapper-1BJsBx:hover .childWrapper-anI2G9 {
+  background: var(--main-color) var(--home-icon) var(--home-position)/var(--home-size);
+}.avatarSpeaking-1wJCNq {
+box-shadow: none;
+}
+.avatarSpeaking-1wJCNq::before {
+content: "";
+display: block;
+height: 20px;
+border-left: 4px solid #43b581;
+position: absolute;
+left: -5px;
+}
+
+.member-3W1lQa {
+  position: relative;
+  background: transparent !important;}
+.mention { color: var(--main-color);}
+
+/* Noise Suppression Button Hider*/
+[aria-label="Noise Suppression powered by Krisp"] {
+  display: none; 
+}
+
+/* Help Button Hider*/
+.toolbar-1t6TWx .iconWrapper-2OrFZ1:last-child{display: none}
+
+/*
+ * Enlarges reactions on hover 
+ */
+ .da-reaction .da-reactionInner > img {
+  position: relative;
+  transition: all 0.08s linear;
+}
+.da-reaction .da-reactionInner:hover > img {
+  transform: scale(3) translate(calc(-100%/3), 10%);
+  z-index: 2001;
+}
+
+/* Remove the discord icon */
+.wordmark-2iDDfm {
+  display: none;
+}
+.wordmark-2iDDfm:after {
+  content: "4";
+  color: #ffff;
+}
+.wordmark-2iDDfm > svg {
+  display: none;
+}
+/* Some other fixes themeing of the member screening screen */
+/* outer box
+background-color: rgba(0,0,0,0.4);
+inner box
+background-color: rgba(255,255,255,0.05); */
+.enableContainer-2DIT9Q {
+  background-color: rgba(0,0,0,0.4);
+}
+.settingsFormItem-103g1I {
+  background-color: rgba(0,0,0,0.4);
+}
+.settingsFormFieldWrapper-3Y77Pr {
+  background-color: rgba(255,255,255,0.05);
+}
+/* if you dont want to see something just remove the */
+/*Member list hider*
+.membersWrap-2h-GB4:before {
+  content: 'Members';
+  color: #fff;
+  line-height: 20px;
+  font-family: inherit;
+  font-size: 16px;
+  width: 105px;
+  height: 20px;
+  background-color: var(--main-color);
+  position: absolute;
+  text-align: center;
+  white-space: pre-wrap;
+  left: -70px;
+  top: 60px;
+  border-radius: 5px;
+  transform: rotate(270deg);
+}
+
+.membersWrap-2h-GB4:hover:before {
+  background-color: var(--hover-color);
+}
+
+.membersWrap-2h-GB4 {
+  left: var(--members-width);
+  margin-left: calc(var(--members-width) * -1);
+  transition: .4s all ease-out;
+}
+
+.membersWrap-2h-GB4:hover{
+  left: 0;
+}
+
+/*Server Hider *
+nav.wrapper-1Rf91z {
+  left: -55px;
+  opacity: 0;
+  transition: .3s all ease-out;
+}
+
+nav.wrapper-1Rf91z:hover {
+  left: 0px;
+  opacity: 1;
+  transition: .3s all ease-out;
+}
+
+div.da-base{        
+  left: 10px ;
+  transition: .3s all ease-out;
+}
+
+nav.wrapper-1Rf91z:hover ~ div.da-base{
+  left: 72px ;
+  transition: .3s all ease-out;
+}
+
+/* Channel Hider *
+.sidebar-2K8pFh{
+min-width:10px!important;
+max-width:240px!important;
+width:20px;
+transition: all 1s;
+opacity: 0;
+}
+
+.sidebar-2K8pFh:hover{
+width:320px;
+transition: all 1s;
+opacity: 1;
+}
+
+/* Activity hider*/
+.nowPlayingColumn-2sl4cE {
+  position: relative;
+  left: 350px ;
+  opacity: 1;
+  margin-left: -350px;
+  transition: .7s all ease-out;}
+.nowPlayingColumn-2sl4cE:hover {
+  left: 0 ;
+  opacity: 1;
+  margin-left: 0;
+  transition: .7s all ease-out;}
+
+
+
+
+

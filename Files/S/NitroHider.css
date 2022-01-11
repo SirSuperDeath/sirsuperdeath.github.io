@@ -2,42 +2,42 @@
  * 
  */
 [href="/store"],
-.buttons-3JBrkn > button:not(.message-translate-settings-button),
+.buttons-uaqb-5 > button:not(.message-translate-settings-button),
 [aria-controls="Discord Nitro-tab"],
 [aria-controls="Billing-tab"],
 [aria-controls="Nitro Server Boost-tab"],
-#guild-header-popout > div > .separator-2I32lJ:nth-child(2),
-.shinyButton-3uFlM-,
-.emojiSection-3Fb9ix > .flex-1xMQg5 > .size14-e6ZScH,
-.emojiSection-3Fb9ix > .flex-1xMQg5 > .flex-1xMQg5 > .size14-e6ZScH,
-.emptyStateSubtext-2hdA9c, 
-.content-2c3hgM, 
+#guild-header-popout > div > .separator-1So4YB:nth-child(2),
+.shinyButton-2Q9MDB,
+.emojiSection-3QtaWO > .flex-2S1XBF > .size14-3fJ-ot,
+.emojiSection-3QtaWO > .flex-2S1XBF > .flex-2S1XBF > .size14-3fJ-ot,
+.emptyStateSubtext-1nMe5m, 
+.content-374sTA, 
 .wrapper-1hrFc0, 
 .wrapper-3nSjSv, 
 .divider-Uf0Wob,
 .perksModalContentWrapper-2HU6uL > .content-2qfHzC:nth-child(3),
-.guildsBlurb-2AgVCC,
-.marketingHeader-d16BX1,
-.content-3BhRLj > div:not(.marketingLogo-1D8DV6), .content-3BhRLj > h3,
-.subscribeTooltipWrapper-1JoUuw,
+.guildsBlurb-1fFvov,
+.marketingHeader-27aoGA,
+.content-11k50x > div:not(.marketingLogo-pyU32f), .content-11k50x > h3,
+.subscribeTooltipWrapper-3ipXtC,
 .headerBlurb-1GxBrq,
 .giftAction-yhDLaW,
-.tierMarkerLabelContainer-1qM0Ak
+.tierMarkerLabelContainer-1bRYay
 { display: none;}
 
 /* -- Repairing the damages -- */
 /* Emote information popup */
-.emojiSection-3Fb9ix > .flex-1xMQg5, .popoutContainer-1MXdqN > .flex-1xMQg5 { 
+.emojiSection-3QtaWO > .flex-2S1XBF, .popoutContainer-2wbmiM > .flex-2S1XBF { 
   flex-direction: column;
   align-items: center;
 }
-.emojiSection-3Fb9ix > .flex-1xMQg5 > .flex-1xMQg5,
-.popoutContainer-1MXdqN > .flex-1xMQg5 > .flex-1xMQg5 { margin-left: 0px; }
-.primaryEmoji-3LinDq { margin: 0px 0px 12px 0; }
-.popoutContainer-1MXdqN { width: auto; }
+.emojiSection-3QtaWO > .flex-2S1XBF > .flex-2S1XBF,
+.popoutContainer-2wbmiM > .flex-2S1XBF > .flex-2S1XBF { margin-left: 0px; }
+.primaryEmoji-2Og_xG { margin: 0px 0px 12px 0; }
+.popoutContainer-2wbmiM { width: auto; }
 /** Removing the grayscale of nitro needed emotes useful 
  * if you have the DiscordFreeEmojis plugin by AnO **/
-.emojiItemDisabled-1FvFuF {
+.emojiItemDisabled-3VVnwp {
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
 }
