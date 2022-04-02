@@ -10,6 +10,10 @@
 
 /* Import Fixes */ 
 
+/* Remove Public Tag */
+.communityInfoContainer-1dMVpU {
+  display: none;
+}
 /* Home Icon */
 #app-mount .listItemWrapper-3X98Pc .childWrapper-1j_1ub {
   background: url("https://i.imgur.com/233d55Y.gif") center/cover no-repeat;
