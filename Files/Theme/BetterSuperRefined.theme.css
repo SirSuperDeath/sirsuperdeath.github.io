@@ -7,12 +7,31 @@
  * @website https://sirsuperdeath.github.io
  */
 
+
+
+
  /** imports css is all should be in here 
   * This file is mostly for testing but hey
   * maybe it will become a theme **/
- @import url(https://sirsuperdeath.github.io/Files/vizality/CVFixes.css);
+ /*@import url(https://sirsuperdeath.github.io/Files/vizality/CVFixes.css);*/
+ @import url(https://sirsuperdeath.github.io/Files/S/Rightclick.css);
  @import url(https://sirsuperdeath.github.io/Files/Super/SSD.css);
  @import url(https://sirsuperdeath.github.io/Files/S/SuperImport.css);
+
+
+#app-mount .container-2McqkF {
+  background: rgba(43, 43, 43, 0.411);
+  backdrop-filter: blur(10px);
+}
+/* Remove leave button */
+.colorDefault-CDqZdO[id="guild-header-popout-leave"] {
+  display: none;
+}
+
+/* Remove Public Tag */
+.communityInfoContainer-1dMVpU {
+  display: none;
+}
  /* Remove Boost Goal*/
  .container-3fNISf {
    display: none !important;
