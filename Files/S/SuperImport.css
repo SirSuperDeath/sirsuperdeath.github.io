@@ -143,13 +143,7 @@
 .noChat-2UYgeE .content-3u3YYB>.background-L8lGH6, .tile-2TcwiO {
   background: transparent !important
 }
-.newMessagesBar-1hF-9G.barBase-3xxDXu
-{ width: 50%;
-  left: 50%;
-  border-radius: 0px 0px 0px 10px !important; }
-.jumpToPresentBar-1cEnH0.barBase-3xxDXu
-{ width: 46%;
-  border-radius: 10px 10px 0px 0px !important; }
+
 /**Mostly revert profile popout**
 Replaces new profile popout with old one as best as possible in css*/
 /*Popout*/
