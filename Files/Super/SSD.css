@@ -1,7 +1,4 @@
 /** this is my own changes i use id say dont use this **/
-
-
-
 /* Remove grayscale filter on emotes you cant use */
 .emojiItem-14v6tW.emojiItemDisabled-1FvFuF { filter: none;}
 /* Remove CV WaterMark */
@@ -100,3 +97,9 @@ display: none;
 .children-3rEycc {
     display: none;
   }
+/* Remove leave button */
+.colorDefault-CDqZdO[id="guild-header-popout-leave"] {
+  display: none;
+}
+ /* Remove grayscale filter on emotes you cant use */
+ .emojiItem-277VFM.emojiItemDisabled-3VVnwp { filter: none;}
