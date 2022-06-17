@@ -1,8 +1,7 @@
 /* For other Fixes such as Hide Memberlist , Servers etc they are now located in https://raw.githubusercontent.com/SuperDeath/superdeath.github.io/master/README.md*/
 @import "Hider.css";
 @import "NitroHider.css";
-@import "credits.css";
-@import "settingsicons.css";
+
 
 /* Collapsing Voice Channel Panel */
 .panels-3wFtMD .actionButtons-2vEOUh {
@@ -109,8 +108,6 @@
   overflow: visible !important;
   opacity: 1 !important;
 }
-/* Fix Dm Outlined */
-.scroller-2TZvBN>:not(.listItem-2P_4kh):nth-child(2) {justify-content: left !important;}
 /* Remove the discord icon */
   .wordmark-2u86JB {
     display: none;
@@ -122,14 +119,6 @@
   .wordmark-2u86JB > svg {
     display: none;
   }
-/* Spotify Model change to copy main Var(--main-color) of theme */ 
-.barFill-Dhkah7 {
-  background: var(--main-color) !important;
-}
-.timeline-UWmgAx:hover
-.barFill-Dhkah7 {
-  background: var(--main-color) !important;
-}
 /*Better Discord Plugins/Themes tab themed */
 #app-mount .bd-addon-list .bd-addon-card, .bd-addon-list .bd-addon-header {background-color: rgba(0, 0, 0, 0.294);
 }
