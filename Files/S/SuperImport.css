@@ -8,10 +8,9 @@
   opacity: 0;
   transition: all 0.25s ease-out;
 }
-
 /* changes the color of the context menu and makes it a more appropriate size */
 .wrapper-2vIMkT {
-  transform: scale(0.6)
+  transform: scale(0.6) !important
 }
 .container-2gUZhU .wrapper-2vIMkT {background-color: rgba(0,0,0,0.4);
 }
@@ -19,14 +18,11 @@
   height: 36px;
   opacity: 1;
 }
-
 /* Search Hide until hover */
 .search-1FM8Qc:not(.open-3y3yI_) .searchBar-zdmu7v { width: 27px; transition: 0.25s; background-color: transparent;}
 .search-1FM8Qc:not(.open-3y3yI_):hover .searchBar-zdmu7v { width: 240px; transition: 0.25s; background-color: rgba(22, 22, 22, 0.774); ;}
 .search-1FM8Qc:not(.open-3y3yI_) .iconContainer-1RqWJj { transform: scale(1.2); transition: 0.25s;}
 .search-1FM8Qc:not(.open-3y3yI_):hover .iconContainer-1RqWJj { transform: scale(1); transition: 0.25s;}
-
-
 /* Animated Ping Icon */ 
 .ping-2IpLcU {
   width: 18px;
@@ -57,8 +53,6 @@
     transform: scaleY(1)
   }
   }
-
-  
 /* Removes the background behind the Member count*/
 .theme-dark #MemberCount {
   background-color: transparent !important;
@@ -72,7 +66,6 @@
   padding-top: 0px;
   padding-bottom: 0px;
 }
-
 /* Fly in Voice Chat buttons fix */
 .panels-3wFtMD .container-YkUktl button[aria-checked="false"], .panels-3wFtMD .container-YkUktl button:not([role="switch"]) {
   transition: 0.2s ease-in-out;
@@ -104,7 +97,6 @@
 .noChat-2UYgeE .content-3u3YYB>.background-L8lGH6, .tile-2TcwiO {
 background: transparent !important
 }
-
 /**Mostly revert profile popout**
 Replaces new profile popout with old one as best as possible in css*/
 /*Popout*/
@@ -187,15 +179,12 @@ backdrop-filter: blur(10px);
  .icon-2xnN2Y [d="M6 1C3.243 1 1 3.244 1 6c0 2.758 2.243 5 5 5s5-2.242 5-5c0-2.756-2.243-5-5-5zm0 2.376a.625.625 0 110 1.25.625.625 0 010-1.25zM7.5 8.5h-3v-1h1V6H5V5h1a.5.5 0 01.5.5v2h1v1z"] {
    d: path("M 7 4.003 C 7 5.1055 6.103 6.003 5 6.003 C 3.8975 6.003 3 5.1055 3 4.003 C 3 2.9005 3.897 2.003 5 2.003 C 6.103 2.003 7 2.9005 7 4.003 Z M 1 9.503 C 1 7.7365 2.645 6.503 5 6.503 C 7.3555 6.503 9 7.7365 9 9.503 V 10.003 H 1 V 9.503 Z M 10 10.003 H 11 V 9.503 C 11 8.2217 10.1349 7.2207 8.7607 6.7676 C 9.5311 7.4563 10 8.403 10 9.503 V 10.003 Z M 7.4417 5.9539 C 8.3329 5.7522 9 4.9539 9 4 C 9 2.9846 8.2347 2.1411 7.2485 2.0183 C 7.7161 2.5476 8 3.2426 8 4 C 8 4.7244 7.7444 5.3871 7.3189 5.9051 C 7.3601 5.9209 7.4011 5.9371 7.4417 5.9539 Z");
  }
-
  .UserBackgrounds-banner-badge {
    display: none;
  }
- 
  #dv-mount {
    background-color:rgba(0, 0, 0, 0.342) !important;
  }
- 
  .toolbar-3_r2xA .iconWrapper-2awDjA.selected-29KTGM {
    background: transparent !important;
    color: rgba(255, 255, 255, 0.5);
