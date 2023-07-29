@@ -1,0 +1,144 @@
+/**
+ * @name BetterSuperRefined
+ * @author SirSuperDeath
+ * @version Dev
+ * @description Just some Fixes and Snippets / Supers Personal Theme
+ * @source https://github.com/SirSuperDeath
+ * @website https://sirsuperdeath.github.io
+ */
+@import url(https://sirsuperdeath.github.io/Files/Super/SSD.css);
+@import url(https://sirsuperdeath.github.io/Files/S/SuperImport.css);
+
+/* removes a bunch of stuff */
+[class^="message-"] div[aria-label*="super" i]:has([class^="icon-"]),
+[class^="reactButtons-"] > div[aria-label*="super" i],
+[class^="reactionInner-"] [class^="effectsWrapper-"],
+[class^="burstReactionTooltipPrompt-"],
+[class^="burstEmojiSection-"],
+[class*="colorPremiumGradient-"],
+button[id="super-reaction-picker-tab"],
+[class^="burstGlow-"] {
+  display: none;
+}
+/* makes super reactions not disappear on hover */
+[class*="hideEmoji-"] {
+  opacity: 1;
+}
+/* removes stuff from emoji hover popup */
+[class*="burstReactionTooltipSpacer-"] {
+  border: none !important;
+  padding: 0px;
+  margin: 0px;
+}
+/* makes background color the same as normal reactions in "show reactions" tab*/
+[class^="reactionSelected-"] {
+  background: var(--background-tertiary) !important;
+}
+/* adds background color to super reactions and disables clicking */
+[class^="reactionInner-"]:is([aria-label*=" super " i]) {
+  display: none;
+  pointer-events: none;
+}
+/* removes shake animation */
+[class*="shakeReaction-"] {
+  animation: none !important;
+}
+.buttonContainer-1502pf .button-3bklZh:has([d^="M20"]) {
+  display: none;
+}
+
+.emojiItemDisabled-3VVnwp {
+filter: grayscale(0%);
+}
+
+.search-39IXmY .search-2Mwzzq:not(.open-1F8u2c) .searchBar-jGtisZ {
+  width: 27px;
+  transition: 250ms;
+  background-color: transparent;
+}
+
+.search-39IXmY .search-2Mwzzq:not(.open-1F8u2c) .searchBar-jGtisZ .iconContainer-1RqWJj {
+  transform: scale(1.3);
+  transition: 250ms;
+}
+
+.search-39IXmY .search-2Mwzzq:not(.open-1F8u2c) .searchBar-jGtisZ .iconContainer-1RqWJj .icon-18rqoe {
+  color: var(--interactive-normal);
+}
+
+.search-39IXmY .search-2Mwzzq:not(.open-1F8u2c):hover .searchBar-jGtisZ {
+  width: 200px;
+  background-color: transparent;
+}
+
+.search-39IXmY .search-2Mwzzq:not(.open-1F8u2c):hover .searchBar-jGtisZ .iconContainer-1RqWJj {
+  transform: scale(1);
+}
+
+/* No profile deco */
+[mask="url(#svg-mask-avatar-decoration-profile-status-square-80)"] {
+  mask: url("#svg-mask-avatar-status-round-80") !important;
+}
+
+[mask="url(#svg-mask-avatar-decoration-profile-status-mobile-square-80)"] {
+  mask: url("#svg-mask-avatar-status-mobile-80") !important;
+}
+
+svg[class*="avatarDecorationHint"] {
+  left: 0px;
+  top: 0px;
+  height: 80px;
+  width: 80px;
+}
+
+[class^="userPopoutInner"] [class^="wrapper"] [class^="banner"],
+[class^="avatarDecoration"],
+[mask^="url(#svg-mask-avatar-decoration-status"],
+[class*="bannerSVGWrapper"] mask image {
+  display: none;
+}
+
+[mask^="url(#svg-mask-avatar-decoration-profile"] [class*="avatarHintInner"] {
+  font-size: 12px !important;
+}
+
+/* Remove super reactions */
+.button-3bklZh[aria-label="Add Super Reaction"],
+.colorPremiumGradient-38tGFG.focused-3LIdPu, .colorPremiumGradient-38tGFG:active:not(.hideInteraction-1vQrZJ),
+.colorPremiumGradient-38tGFG,
+.reactionBtn-3I19bq:has(path[d^="M20.3397 14.2379C21.2318"]),
+.navButton-Z_c6CC[id="super-reaction-picker-tab"] {
+  display: none;
+}
+/* Remove leave button */
+.colorDefault-CDqZdO[id="guild-header-popout-leave"] {
+  display: none;
+}
+
+ [aria-label="Window Bar"],
+ [aria-label="Members List"],
+ [aria-label="Message Bar"]
+  {
+   display: none; }
+ 
+ /* Clock plugin */
+ #clockPluginClock::before {
+   display: none;
+ }
+ #clockPluginClock {
+   margin-left: 69px;
+   /*left: 1675px;*/
+   color: rgb(255, 255, 255);
+   font-size: 26px;
+   margin-top: -7px;
+ }
+ .pictureInPictureVideo-2puO2Q {
+  display: none;
+ }
+/* Remove Banners on userpopout */
+ .banner-2boKnS.popoutBanner-16rVDY {
+  opacity: 0%;
+ }
+ .popoutBannerPremium-2RvDNZ.bannerPremium-86naOf {
+  opacity: 0%;
+ }
