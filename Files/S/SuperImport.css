@@ -53,10 +53,7 @@
     transform: scaleY(1)
   }
   }
-/* Removes the background behind the Member count*/
-.theme-dark #MemberCount {
-  background-color: transparent !important;
-}
+
 /* removes the stupid background on messages over hover */
 .mouse-mode .message-2CShn3:hover {
   background-color: transparent !important;
@@ -89,9 +86,6 @@
 }
 .wordmark-2u86JB > svg {
   display: none;
-}
-/*Better Discord Plugins/Themes tab themed */
-#app-mount .bd-addon-list .bd-addon-card, .bd-addon-list .bd-addon-header {background-color: rgba(0, 0, 0, 0.294);
 }
 /* Removing Background of the Voice chat */
 .noChat-2UYgeE .content-3u3YYB>.background-L8lGH6, .tile-2TcwiO {

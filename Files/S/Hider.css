@@ -4,11 +4,11 @@
     display: none
   }
 /*Gift Button Hider Snippet*/
-  .channelTextArea-1FufC0 .buttons-uaqb-5 .button-38aScr[tabindex="0"]:first-child,
-  .channelTextArea-1FufC0 .buttons-uaqb-5 .buttonWrapper-3YFQGJ + .buttonWrapper-3YFQGJ[tabindex="0"] {
+.channelTextArea-1VQBuV .buttons-uaqb-5 .button-38aScr[tabindex="0"]:first-child,
+  .channelTextArea-1VQBuV .buttons-uaqb-5 .buttonWrapper-3YFQGJ + .buttonWrapper-3YFQGJ[tabindex="0"] {
       display:none;
   }
-  .channelTextArea-1FufC0 .buttonContainer-2lnNiN .button-38aScr {
+  .channelTextArea-1VQBuV .buttonContainer-2lnNiN .button-38aScr {
       display:block !important;
   }
  /* Remove anoyying light up avatar when talking */
@@ -85,12 +85,13 @@
 }
 /* Hiding the emote icon and gif icon behind the send file icon untill you hover over it*/
 .buttons-uaqb-5 {opacity: 0; transition: opacity 0.1s;}
-.channelTextArea-1FufC0:hover .buttons-uaqb-5 {opacity: 1.0;}
+.channelTextArea-1VQBuV:hover .buttons-uaqb-5 {opacity: 1.0;}
 
 .attachWrapper-3slhXI {order:1; margin-left:9px;}
 .attachButton-_ACFSu {padding-right:0px}
 
 .uploadModal-2ie9O_ .buttons-uaqb-5 {opacity: 1.0;}
+
 
 /* Doing this just incase they change the class again */
 [aria-label="Help"] {
