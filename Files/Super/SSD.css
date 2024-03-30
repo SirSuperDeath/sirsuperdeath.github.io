@@ -102,9 +102,9 @@ display: none;
   display: none;
 }
  /* Remove grayscale filter on emotes you cant use */
- .emojiItem_b15dee.emojiItemDisabled__36cbf { filter: none;}
+ .emojiItem_de65fd.emojiItemDisabled__843ea { filter: none;}
  /* Floating Folder */
-.wrapper_ed1dea:active {
+.wrapper__832f2:active {
   -webkit-transform: unset;
   transform: none;
 }

@@ -11,22 +11,22 @@
 /* Import Fixes */ 
 
 /* Remove Public Tag */
-.communityInfoContainer-1dMVpU {
+.communityInfoContainer__6ea3a {
   display: none;
 }
 /* Home Icon */
-#app-mount .listItemWrapper-3X98Pc .childWrapper-1j_1ub {
+#app-mount .listItemWrapper-3X98Pc .childWrapper_a6ce15 {
   background: url("https://i.imgur.com/233d55Y.gif") center/cover no-repeat;
 }
- .homeIcon-r0w4ny {
+ .homeIcon__560eb {
    display: none;
  }
 /* Animated Ping Icon */ 
-.ping-2IpLcU {
+.ping__838d2 {
   width: 18px;
   height: 18px
   }
-  .ping-2IpLcU {
+  .ping__838d2 {
   transform-origin: bottom;
   rx:0;
   animation: ping-counter 2s linear infinite
@@ -52,43 +52,43 @@
   }
   }
 /* removes the stupid background on messages over hover */
-.mouse-mode .message-2CShn3:hover {
+.mouse-mode .message_ccca67:hover {
   background-color: transparent;
 }
 
 /* makes the unread thing in the center instead of the right, also rounds it 
-.unreadPill-3nEWYM {
+.unreadPill__1b4fa {
   left: 45%;
   right: 50%;
   border-radius: 10px;
 }
 /* gets rid of the pointy tip on the unread bar 
-.unreadPillCap-2-iI4h {
+.unreadPillCap__44e20 {
   display: none;
 }
 /* go back to the regular spacing between messages */
-.container-3FojY8 {
+.container__2acd5 {
   padding-top: 0px;
   padding-bottom: 0px;
 }
 /* changes the color of the context menu and makes it a more appropriate size */
-.wrapper-2vIMkT {
+.wrapper__4e6b6 {
   transform: scale(0.6)
 }
-.container-2gUZhU .wrapper-2vIMkT {background-color: rgba(0,0,0,0.4);}
+.container__2f489 .wrapper__4e6b6 {background-color: rgba(0,0,0,0.4);}
 /*Gift Button Hider Snippet*/
-.channelTextArea-1FufC0 .buttons-uaqb-5 .button-38aScr[tabindex="0"]:first-child,
-.channelTextArea-1FufC0 .buttons-uaqb-5 .buttonWrapper-3YFQGJ + .buttonWrapper-3YFQGJ[tabindex="0"] {
+.channelTextArea_c2094b .buttons__7ecff .button-38aScr[tabindex="0"]:first-child,
+.channelTextArea_c2094b .buttons__7ecff .buttonWrapper_bd4bd7 + .buttonWrapper_bd4bd7[tabindex="0"] {
     display:none;
 }
-.channelTextArea-1FufC0 .buttonContainer-2lnNiN .button-38aScr {
+.channelTextArea_c2094b .buttonContainer_ff1010 .button-38aScr {
     display:block !important;
 }
 .theme-dark #MemberCount {
     background-color: transparent;
 }
 /*  Talking Blue */ 
-.wrapper-3kah-n.selected-1Drb7Z .childWrapper-1j_1ub, .wrapper-3kah-n:hover .childWrapper-1j_1ub {
+.wrapper__8436d.selected_ae80f7 .childWrapper_a6ce15, .wrapper__8436d:hover .childWrapper_a6ce15 {
   background: var(--main-color) var(--home-icon) var(--home-position)/var(--home-size);
 }.avatarSpeaking-1wJCNq {
 box-shadow: none;
@@ -113,7 +113,7 @@ left: -5px;
 }
 
 /* Help Button Hider*/
-.toolbar-3_r2xA .iconWrapper-2awDjA:last-child{display: none}
+.toolbar__62fb5 .iconWrapper_de6cd1:last-child{display: none}
 
 /*
  * Enlarges reactions on hover 
@@ -128,14 +128,14 @@ left: -5px;
 }
 
 /* Remove the discord icon */
-.wordmark-2u86JB {
+.wordmark__5b8c9 {
   display: none;
 }
-.wordmark-2u86JB:after {
+.wordmark__5b8c9:after {
   content: "4";
   color: #ffff;
 }
-.wordmark-2u86JB > svg {
+.wordmark__5b8c9 > svg {
   display: none;
 }
 /* Some other fixes themeing of the member screening screen */
@@ -154,7 +154,7 @@ background-color: rgba(255,255,255,0.05); */
 }
 /* if you dont want to see something just remove the */
 /*Member list hider*
-.membersWrap-3NUR2t:before {
+.membersWrap__5ca6b:before {
   content: 'Members';
   color: #fff;
   line-height: 20px;
@@ -172,17 +172,17 @@ background-color: rgba(255,255,255,0.05); */
   transform: rotate(270deg);
 }
 
-.membersWrap-3NUR2t:hover:before {
+.membersWrap__5ca6b:hover:before {
   background-color: var(--hover-color);
 }
 
-.membersWrap-3NUR2t {
+.membersWrap__5ca6b {
   left: var(--members-width);
   margin-left: calc(var(--members-width) * -1);
   transition: .4s all ease-out;
 }
 
-.membersWrap-3NUR2t:hover{
+.membersWrap__5ca6b:hover{
   left: 0;
 }
 
@@ -210,7 +210,7 @@ nav.wrapper-1Rf91z:hover ~ div.da-base{
 }
 
 /* Channel Hider *
-.sidebar-1tnWFu{
+.sidebar_e031be{
 min-width:10px!important;
 max-width:240px!important;
 width:20px;
@@ -218,20 +218,20 @@ transition: all 1s;
 opacity: 0;
 }
 
-.sidebar-1tnWFu:hover{
+.sidebar_e031be:hover{
 width:320px;
 transition: all 1s;
 opacity: 1;
 }
 
 /* Activity hider*/
-.nowPlayingColumn-1eCBCN {
+.nowPlayingColumn_b025fe {
   position: relative;
   left: 350px ;
   opacity: 1;
   margin-left: -350px;
   transition: .7s all ease-out;}
-.nowPlayingColumn-1eCBCN:hover {
+.nowPlayingColumn_b025fe:hover {
   left: 0 ;
   opacity: 1;
   margin-left: 0;
