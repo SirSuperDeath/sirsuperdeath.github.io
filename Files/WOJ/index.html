@@ -71,6 +71,7 @@
         justify-content: center;
         align-items: center;
         padding: 8px 20px;
+        width: 100%;
         background-color: #3498db; /* Blue button color */
         color: #fff; /* White font color */
         border: none;
@@ -84,12 +85,17 @@
     }
     .copy-animation {
         animation-name: copyAnimation;
-        animation-duration: 0.5s;
+        animation-duration: 1.10s;
     }
     @keyframes copyAnimation {
         0% { transform: scale(1); }
-        50% { transform: scale(1.1); }
+        50% { transform: scale(1.03); }
         100% { transform: scale(1); }
+        0% {background: linear-gradient(45deg, #db34c5, #b9294d); }
+        50% {background: linear-gradient(45deg, #4d34db, #2980b9); }
+        100% {background: linear-gradient(45deg, #3498db, #29b94d); }
+}
+
     }
 </style>
 </head>
@@ -101,6 +107,7 @@
     <form id="wordReplacerForm">
         <input type="radio" id="predefinedInput" name="inputType" value="predefined" checked style="display: none;">
         <input type="radio" id="customInput" name="inputType" value="custom" style="display: none;">
+        <label for="wordSetSelect">Choose the template mission to edit or edit your own text with custom input</label>
         <select id="wordSetSelect">
             <option value="
             We have [b]war[/b] in [b]{systemname}[/b]! Help the Wolves of Jonai to win.
@@ -156,15 +163,15 @@
         <textarea id="customTextInput" placeholder="Enter custom text..." style="display: none;"></textarea>
         <label for="searchWord">Select or Enter Word(s) to Replace:</label>
         <select id="searchWordSelect">
-            <option value="{systemname}">{systemname}</option>
+            <option value="{systemname}">System Name</option>
             <option value="custom">Custom Word...</option>
         </select>
         <input type="text" id="searchWord" placeholder="Enter Custom Word..." style="display: none;">
         <label for="replaceWord">Replacement Word:</label>
         <input type="text" id="replaceWord" required>
-        <button type="submit">Replace</button>
+        <button type="submit">Replace Words</button>
     </form>
-    <button id="copyButton" class="toggle-button">Copy to Clipboard</button>
+    <button id="copyButton" class="toggle-button">Copy to clipboard</button>
     <div id="output"></div>
 </div>
 
