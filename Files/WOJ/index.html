@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Missions</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #2c3e50; /* Dark blue background */
+        color: #fff; /* White font color */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        width: 90%; /* Adjusted width */
+        max-width: 900px; /* Maximum width */
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #34495e; /* Darker blue container */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    label {
+        margin-bottom: 5px;
+    }
+    input[type="text"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #2c3e50; /* Dark blue input background */
+        color: #fff; /* White font color */
+    }
+    select {
+        appearance: none; /* Remove default appearance */
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #3498db; /* Blue button color */
+        color: #fff; /* White font color */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-bottom: 10px;
+    }
+    button:hover {
+        background-color: #2980b9; /* Darker blue on hover */
+    }
+    #output {
+        margin-top: 20px;
+        color: #fff; /* White font color for output text */
+    }
+    .toggle-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 20px;
+        background-color: #3498db; /* Blue button color */
+        color: #fff; /* White font color */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-bottom: 10px;
+    }
+    .toggle-button:hover {
+        background-color: #2980b9; /* Darker blue on hover */
+    }
+    .copy-animation {
+        animation-name: copyAnimation;
+        animation-duration: 0.5s;
+    }
+    @keyframes copyAnimation {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Mission Writer</h2>
+    <button id="toggleButton" class="toggle-button">Use Predefined Missions</button>
+    <form id="wordReplacerForm">
+        <input type="radio" id="predefinedInput" name="inputType" value="predefined" checked style="display: none;">
+        <input type="radio" id="customInput" name="inputType" value="custom" style="display: none;">
+        <select id="wordSetSelect">
+            <option value="
+            We have [b]war[/b] in [b]{systemname}[/b]! Help the Wolves of Jonai to win.
+            
+            To win this war in [b]{systemname}[/b], Command would like you to do the following:
+            
+            [ul]
+            [li]Do Massacre missions for the Wolves of Jonai in the [b]{systemname}[/b] system;[/li]
+            [li]Do Wartime and Strategic missions for the Wolves of Jonai in the [b]{systemname}[/b] system;[/li]
+            [li]Successfully complete combat zone scenarios for the Wolves of Jonai in the [b]{systemname}[/b] system;[/li]
+            [li]Hand in Wolves of Jonai Combat Bonds from the Combat Zones to any station in [b]{systemname}[/b];[/li]
+            [li]Hand in Wolves of Jonai Bounty Vouchers to any station in [b]{systemname}[/b]. [/li]
+            [/ul]
+            
+            
+            If you have any questions, you can ask us in the BGS-Redwolves channel on Discord.
+            Join the Wolves of Jonai Community Discord:
+            [url=http://discord.gg/6CzTtP5]http://discord.gg/6CzTtP5[/url]">War Mission</option>
+            
+            <option value="We have are in a [b]Election[/b] in [b]{systemname}[/b]!
+            
+            To achieve this goal Command recommends:
+            [ul]
+            [li]Complete missions for the Wolves of Jonai in the [b]{systemname}[/b] System[/li]
+            [li]Complete passenger contracts for the Wolves of Jonai in the [b]{systemname}[/b] System[/li]
+            [li]Conduct profitable trade at Wolves Of Jonai owned Stations in [b]{systemname}[/b][/li]
+            [li]Sell exploration data to Wolves Of Jonai owned Stations in [b]{systemname}[/b][/li]
+            [/ul]
+            
+            Select the [b]“influence”[/b] mission reward whenever possible.
+            
+            If you have any questions, you can ask us in the BGS-Redwolves channel on Discord.
+            Join the Wolves of Jonai Community Discord:
+            [url=http://discord.gg/6CzTtP5]http://discord.gg/6CzTtP5[/url]
+            ">Election Mission</option>
+            <option value="The Wolves of Jonai command would like to increase our [b]Influence[/b] in the [b]{systemname}[/b] system.
+
+            To achieve this goal Command recommends:
+            [ul]
+            [li]Complete missions for the Wolves of Jonai in the [b]{systemname}[/b] System[/li]
+            [li]Complete passenger contracts for the Wolves of Jonai in the [b]{systemname}[/b] System[/li]
+            [li]Hand in Bounties Vouchers for the Wolves of Jonai at any station in the [b]{systemname}[/b] system[/li]
+            [li]Conduct profitable trade at a Wolves of Jonai owned in [b]{systemname}[/b][/li]
+            [li]Sell exploration data to a Wolves of Jonai owned in [b]{systemname}[/b][/li]
+            [/ul]
+            
+            Select the [b]“influence”[/b] mission reward whenever possible.
+            
+            If you have any questions, you can ask us in the BGS-Redwolves channel on Discord.
+            Join the Wolves of Jonai Community Discord:
+            [url=http://discord.gg/6CzTtP5]http://discord.gg/6CzTtP5[/url]">Influence Mission</option>
+        </select>
+        <textarea id="customTextInput" placeholder="Enter custom text..." style="display: none;"></textarea>
+        <label for="searchWord">Select or Enter Word(s) to Replace:</label>
+        <select id="searchWordSelect">
+            <option value="{systemname}">{systemname}</option>
+            <option value="custom">Custom Word...</option>
+        </select>
+        <input type="text" id="searchWord" placeholder="Enter Custom Word..." style="display: none;">
+        <label for="replaceWord">Replacement Word:</label>
+        <input type="text" id="replaceWord" required>
+        <button type="submit">Replace</button>
+    </form>
+    <button id="copyButton" class="toggle-button">Copy to Clipboard</button>
+    <div id="output"></div>
+</div>
+
+<script>
+(function() {
+    var customTextInput = document.getElementById('customTextInput');
+    var wordSetSelect = document.getElementById('wordSetSelect');
+    var toggleButton = document.getElementById('toggleButton');
+
+    // Show predefined option by default
+    customTextInput.style.display = 'none';
+    wordSetSelect.style.display = 'block';
+    toggleButton.textContent = 'Use Custom Input';
+})();
+
+document.getElementById('toggleButton').addEventListener('click', function() {
+    var customTextInput = document.getElementById('customTextInput');
+    var wordSetSelect = document.getElementById('wordSetSelect');
+    var toggleButton = document.getElementById('toggleButton');
+
+    if (customTextInput.style.display === 'none') {
+        customTextInput.style.display = 'block';
+        wordSetSelect.style.display = 'none';
+        toggleButton.textContent = 'Use Predefined Missions';
+    } else {
+        customTextInput.style.display = 'none';
+        wordSetSelect.style.display = 'block';
+        toggleButton.textContent = 'Use Custom Input';
+    }
+});
+
+document.getElementById('searchWordSelect').addEventListener('change', function() {
+    var selectedOption = this.value;
+    var customWordInput = document.getElementById('searchWord');
+    if (selectedOption === 'custom') {
+        customWordInput.style.display = 'block';
+    } else {
+        customWordInput.style.display = 'none';
+    }
+});
+
+document.getElementById('wordReplacerForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var customTextInput = document.getElementById('customTextInput');
+    var textInput = customTextInput.style.display === 'block' ? customTextInput.value : document.getElementById('wordSetSelect').value;
+    var searchWord;
+    if (document.getElementById('searchWordSelect').value === 'custom') {
+        searchWord = document.getElementById('searchWord').value;
+    } else {
+        searchWord = document.getElementById('searchWordSelect').value;
+    }
+    var replaceWord = document.getElementById('replaceWord').value;
+    var outputDiv = document.getElementById('output');
+
+    if (!textInput.trim()) {
+        outputDiv.innerHTML = '<p style="color: red;">Please enter some text.</p>';
+        return;
+    }
+
+    var replacedText = textInput.replaceAll(searchWord, replaceWord);
+    outputDiv.innerHTML = '<pre>' + replacedText + '</pre>';
+});
+
+document.getElementById('copyButton').addEventListener('click', function() {
+    var outputText = document.getElementById('output').textContent.trim();
+    // Remove the "Replaced Text:" label from the output text
+    outputText = outputText.replace('Replaced Text:', '');
+    navigator.clipboard.writeText(outputText).then(function() {
+        var copyButton = document.getElementById('copyButton');
+        copyButton.classList.add('copy-animation');
+        setTimeout(function() {
+            copyButton.classList.remove('copy-animation');
+        }, 500);
+    }).catch(function() {
+        console.error('Failed to copy output to clipboard!');
+    });
+});
+
+</script>
+
+</body>
+</html>
