@@ -91,11 +91,10 @@
         0% { transform: scale(1); }
         50% { transform: scale(1.03); }
         100% { transform: scale(1); }
-        0% {background: linear-gradient(45deg, #db34c5, #b9294d); }
-        50% {background: linear-gradient(45deg, #4d34db, #2980b9); }
-        100% {background: linear-gradient(45deg, #3498db, #29b94d); }
-}
-
+    }
+    .button-container {
+        display: flex;
+        justify-content: space-between;
     }
 </style>
 </head>
@@ -109,8 +108,7 @@
         <input type="radio" id="customInput" name="inputType" value="custom" style="display: none;">
         <label for="wordSetSelect">Choose the template mission to edit or edit your own text with custom input</label>
         <select id="wordSetSelect">
-            <option value="
-            We have [b]war[/b] in [b]{systemname}[/b]! Help the Wolves of Jonai to win.
+        <option value="[War] in {systemname} | We have [b]war[/b] in [b]{systemname}[/b]! Help the Wolves of Jonai to win.
             
             To win this war in [b]{systemname}[/b], Command would like you to do the following:
             
@@ -127,7 +125,7 @@
             Join the Wolves of Jonai Community Discord:
             [url=http://discord.gg/6CzTtP5]http://discord.gg/6CzTtP5[/url]">War Mission</option>
             
-            <option value="We have are in a [b]Election[/b] in [b]{systemname}[/b]!
+        <option value="[ELE] in {systemname} | We have a [b]Election[/b] in [b]{systemname}[/b]!
             
             To achieve this goal Command recommends:
             [ul]
@@ -143,7 +141,7 @@
             Join the Wolves of Jonai Community Discord:
             [url=http://discord.gg/6CzTtP5]http://discord.gg/6CzTtP5[/url]
             ">Election Mission</option>
-            <option value="The Wolves of Jonai command would like to increase our [b]Influence[/b] in the [b]{systemname}[/b] system.
+        <option value="[INF] in {systemname} | Wolves of Jonai command would like to increase our [b]Influence[/b] in the [b]{systemname}[/b] system.
 
             To achieve this goal Command recommends:
             [ul]
@@ -159,6 +157,8 @@
             If you have any questions, you can ask us in the BGS-Redwolves channel on Discord.
             Join the Wolves of Jonai Community Discord:
             [url=http://discord.gg/6CzTtP5]http://discord.gg/6CzTtP5[/url]">Influence Mission</option>
+            
+            <!-- Add other predefined missions here -->
         </select>
         <textarea id="customTextInput" placeholder="Enter custom text..." style="display: none;"></textarea>
         <label for="searchWord">Select or Enter Word(s) to Replace:</label>
@@ -171,87 +171,111 @@
         <input type="text" id="replaceWord" required>
         <button type="submit">Replace Words</button>
     </form>
-    <button id="copyButton" class="toggle-button">Copy to clipboard</button>
+    <div class="button-container">
+        <button id="copyButton" class="toggle-button">Copy Replaced Text</button>
+        <button id="copyTitleButton" class="toggle-button">Copy Title</button>
+    </div>
     <div id="output"></div>
+    <div id="titleOutput"></div>
 </div>
-
 <script>
-(function() {
-    var customTextInput = document.getElementById('customTextInput');
-    var wordSetSelect = document.getElementById('wordSetSelect');
-    var toggleButton = document.getElementById('toggleButton');
-
-    // Show predefined option by default
-    customTextInput.style.display = 'none';
-    wordSetSelect.style.display = 'block';
-    toggleButton.textContent = 'Use Custom Input';
-})();
-
-document.getElementById('toggleButton').addEventListener('click', function() {
-    var customTextInput = document.getElementById('customTextInput');
-    var wordSetSelect = document.getElementById('wordSetSelect');
-    var toggleButton = document.getElementById('toggleButton');
-
-    if (customTextInput.style.display === 'none') {
-        customTextInput.style.display = 'block';
-        wordSetSelect.style.display = 'none';
-        toggleButton.textContent = 'Use Predefined Missions';
-    } else {
+    (function() {
+        var customTextInput = document.getElementById('customTextInput');
+        var wordSetSelect = document.getElementById('wordSetSelect');
+        var toggleButton = document.getElementById('toggleButton');
+    
+        // Show predefined option by default
         customTextInput.style.display = 'none';
         wordSetSelect.style.display = 'block';
         toggleButton.textContent = 'Use Custom Input';
-    }
-});
-
-document.getElementById('searchWordSelect').addEventListener('change', function() {
-    var selectedOption = this.value;
-    var customWordInput = document.getElementById('searchWord');
-    if (selectedOption === 'custom') {
-        customWordInput.style.display = 'block';
-    } else {
-        customWordInput.style.display = 'none';
-    }
-});
-
-document.getElementById('wordReplacerForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    var customTextInput = document.getElementById('customTextInput');
-    var textInput = customTextInput.style.display === 'block' ? customTextInput.value : document.getElementById('wordSetSelect').value;
-    var searchWord;
-    if (document.getElementById('searchWordSelect').value === 'custom') {
-        searchWord = document.getElementById('searchWord').value;
-    } else {
-        searchWord = document.getElementById('searchWordSelect').value;
-    }
-    var replaceWord = document.getElementById('replaceWord').value;
-    var outputDiv = document.getElementById('output');
-
-    if (!textInput.trim()) {
-        outputDiv.innerHTML = '<p style="color: red;">Please enter some text.</p>';
-        return;
-    }
-
-    var replacedText = textInput.replaceAll(searchWord, replaceWord);
-    outputDiv.innerHTML = '<pre>' + replacedText + '</pre>';
-});
-
-document.getElementById('copyButton').addEventListener('click', function() {
-    var outputText = document.getElementById('output').textContent.trim();
-    // Remove the "Replaced Text:" label from the output text
-    outputText = outputText.replace('Replaced Text:', '');
-    navigator.clipboard.writeText(outputText).then(function() {
-        var copyButton = document.getElementById('copyButton');
-        copyButton.classList.add('copy-animation');
-        setTimeout(function() {
-            copyButton.classList.remove('copy-animation');
-        }, 500);
-    }).catch(function() {
-        console.error('Failed to copy output to clipboard!');
+    })();
+    
+    document.getElementById('toggleButton').addEventListener('click', function() {
+        var customTextInput = document.getElementById('customTextInput');
+        var wordSetSelect = document.getElementById('wordSetSelect');
+        var toggleButton = document.getElementById('toggleButton');
+    
+        if (customTextInput.style.display === 'none') {
+            customTextInput.style.display = 'block';
+            wordSetSelect.style.display = 'none';
+            toggleButton.textContent = 'Use Predefined Missions';
+        } else {
+            customTextInput.style.display = 'none';
+            wordSetSelect.style.display = 'block';
+            toggleButton.textContent = 'Use Custom Input';
+        }
     });
-});
-
+    
+    document.getElementById('searchWordSelect').addEventListener('change', function() {
+        var selectedOption = this.value;
+        var customWordInput = document.getElementById('searchWord');
+        if (selectedOption === 'custom') {
+            customWordInput.style.display = 'block';
+        } else {
+            customWordInput.style.display = 'none';
+        }
+    });
+    
+    document.getElementById('wordReplacerForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        var customTextInput = document.getElementById('customTextInput');
+        var textInput = customTextInput.style.display === 'block' ? customTextInput.value : document.getElementById('wordSetSelect').value;
+        var searchWord;
+        if (document.getElementById('searchWordSelect').value === 'custom') {
+            searchWord = document.getElementById('searchWord').value;
+        } else {
+            searchWord = document.getElementById('searchWordSelect').value;
+        }
+        var replaceWord = document.getElementById('replaceWord').value;
+        var outputDiv = document.getElementById('output');
+        var titleDiv = document.getElementById('titleOutput');
+    
+        if (!textInput.trim()) {
+            outputDiv.innerHTML = '<p style="color: red;">Please enter some text.</p>';
+            return;
+        }
+    
+        var replacedText = textInput.replaceAll(searchWord, replaceWord);
+        outputDiv.innerHTML = '<pre>' + replacedText + '</pre>';
+        
+        // Extract title
+        var title = replacedText.split('|')[0].trim(); // Trim to remove leading/trailing whitespace
+        titleDiv.innerHTML = '<p style="font-weight: bold;">Title: ' + title + '</p>';
+    });
+    
+    document.getElementById('copyButton').addEventListener('click', function() {
+        var outputText = document.getElementById('output').textContent.trim();
+        // Remove the "Replaced Text:" label from the output text
+        outputText = outputText.replace('Replaced Text:', '');
+        // Extract text to the right of the "|"
+        var copiedText = outputText.split('|')[1].trim();
+        navigator.clipboard.writeText(copiedText).then(function() {
+            var copyButton = document.getElementById('copyButton');
+            copyButton.classList.add('copy-animation');
+            setTimeout(function() {
+                copyButton.classList.remove('copy-animation');
+            }, 500);
+        }).catch(function() {
+            console.error('Failed to copy output to clipboard!');
+        });
+    });
+    
+    document.getElementById('copyTitleButton').addEventListener('click', function() {
+        var titleText = document.getElementById('titleOutput').textContent.trim();
+        // Remove the "Title:" label from the title text
+        titleText = titleText.replace('Title:', '');
+        navigator.clipboard.writeText(titleText).then(function() {
+            var copyTitleButton = document.getElementById('copyTitleButton');
+            copyTitleButton.classList.add('copy-animation');
+            setTimeout(function() {
+                copyTitleButton.classList.remove('copy-animation');
+            }, 500);
+        }).catch(function() {
+            console.error('Failed to copy title to clipboard!');
+        });
+    });
+    
 </script>
-
 </body>
 </html>
