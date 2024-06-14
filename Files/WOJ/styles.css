@@ -1,0 +1,192 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #2c3e50; /* Dark blue background */
+    color: #fff; /* White font color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%; /* Adjusted width */
+    max-width: 900px; /* Maximum width */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #34495e; /* Darker blue container */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button-container-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.button-container-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container-top a,
+.info-button {
+    flex: 1;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #3498db; /* Blue button color */
+    color: #fff; /* White font color */
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.button-container-top a:hover,
+.info-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top */
+    margin-bottom: 10px;
+}
+
+.flex-item {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.flex-item:last-child {
+    margin-right: 0;
+}
+
+label {
+    display: block; /* Ensure labels are block-level */
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2c3e50; /* Dark blue input background */
+    color: #fff; /* White font color */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+input[type="text"] {
+    width: calc(100% - 0px); /* Adjusted width */
+}
+
+select {
+    appearance: none; /* Remove default appearance */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498db; /* Blue button color */
+    color: #fff; /* White font color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+#output {
+    margin-top: 20px;
+    color: #fff; /* White font color for output text */
+}
+
+.title-output {
+    color: #fff; /* White font color for title output text */
+}
+
+.toggle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    width: 100%;
+    background-color: #3498db; /* Blue button color */
+    color: #fff; /* White font color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+}
+
+.toggle-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+.copy-animation {
+    animation-name: copyAnimation;
+    animation-duration: 1.10s;
+}
+
+@keyframes copyAnimation {
+    0% {
+        background-color: #ce70a4;
+    }
+    }
+    50% {
+        background-color: #9640ce;
+    }
+    }
+    100% {
+        background-color: #1270ce;
+    }
+}
+
+}
+.tick-button {
+background-color: #1270ce; /* Button background color */
+color: #FFFFFF; /* Text color */
+border: none;
+border-radius: 5px;
+padding: 10px 40px; /* Increased padding */
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s;
+display: flex;
+align-items: center;
+min-width:230px; /* Minimum width */
+justify-content: center; /* Center the text horizontally */
+}
+
+.tick-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.tick-time {
+    flex-grow: 1;
+    text-align: center;
+}
+
+

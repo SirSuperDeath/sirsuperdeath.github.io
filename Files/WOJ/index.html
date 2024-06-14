@@ -3,300 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="styles.css" rel="stylesheet">
 <link href="favicon.png" rel="icon">
 <title>Missions</title>
-<style>
-    body {
-        font-family: Helvetica, sans-serif;
-        background-color: #2c3e50; /* Dark blue background */
-        color: #fff; /* White font color */
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-    .container {
-        width: 90%; /* Adjusted width */
-        max-width: 900px; /* Maximum width */
-        padding: 20px;
-        border-radius: 10px;
-        background-color: #34495e; /* Darker blue container */
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    }
-    h2 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .button-container {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        
-    }
-    .button-container a, .info-button {
-        flex: 0;
-        margin: 0 10px;
-        padding: 10px 20px;
-        background-color: #3498db; /* Blue button color */
-        color: #fff; /* White font color */
-        text-align: center;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        text-decoration: none;
-        transition: background-color 0.3s;
-    }
-    .button-container a:hover, .info-button:hover {
-        background-color: #2980b9; /* Darker blue on hover */
-    }
-    form {
-        display: flex;
-        flex-direction: column;
-    }
-    label {
-        margin-bottom: 5px;
-    }
-    input[type="text"],
-    select,
-    textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #2c3e50; /* Dark blue input background */
-    color: #fff; /* White font color */
-    box-sizing: border-box; /* Include padding and border in width calculation */
-}
-
-input[type="text"] {
-    width: calc(100% - 20px); /* Adjusted width */
-}
-
-    select {
-        appearance: none; /* Remove default appearance */
-    }
-    button {
-        padding: 10px 20px;
-        background-color: #3498db; /* Blue button color */
-        color: #fff; /* White font color */
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        margin-bottom: 10px;
-    }
-    button:hover {
-        background-color: #2980b9; /* Darker blue on hover */
-    }
-    #output {
-        margin-top: 20px;
-        color: #fff; /* White font color for output text */
-    }
-    .toggle-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 8px 20px;
-        width: 100%;
-        background-color: #3498db; /* Blue button color */
-        color: #fff; /* White font color */
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        margin-bottom: 10px;
-    }
-    .toggle-button:hover {
-        background-color: #2980b9; /* Darker blue on hover */
-    }
-    .copy-animation {
-        animation-name: copyAnimation;
-        animation-duration: 1.10s;
-    }
-    @keyframes copyAnimation {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.03); }
-        100% { transform: scale(1); }
-    }
-    .button-container {
-        display: flex;
-        justify-content: space-between;
-    }
-    .tick-button {
-    background-color: #1270ce; /* Button background color */
-    color: #FFFFFF; /* Text color */
-    border: none;
-    border-radius: 5px;
-    padding: 10px 40px; /* Increased padding */
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-    min-width:230px; /* Minimum width */
-    justify-content: center; /* Center the text horizontally */
-}
-
-.tick-icon {
-    margin-right: 10px;
-    font-size: 20px;
-}
-
-.tick-time {
-    flex-grow: 1;
-    text-align: center;
-}
-
-</style>
 </head>
 <body>
 <div class="container">
     <!-- New buttons -->
-    <div class="button-container">
+    <div class="button-container-top">
         <a href="https://inara.cz/elite/squadron-mission-add/380/" target="_blank">WOJ Mission Writer</a>
         <a href="https://elitebgs.app/tick" id="infoButton" class="tick-button">
             <span class="tick-icon">⏰</span>
             <span id="tickTime" class="tick-time">Loading...</span>
         </a>     
     </div>
-    
-    <button id="toggleButton" class="toggle-button">Use Predefined Missions</button>
+    <!--<button id="toggleButton" class="toggle-button">Use Predefined Missions</button>-->
     <form id="wordReplacerForm">
         <input type="radio" id="predefinedInput" name="inputType" value="predefined" checked style="display: none;">
         <input type="radio" id="customInput" name="inputType" value="custom" style="display: none;">
-        <label for="wordSetSelect">Choose the template mission to edit or edit your own text with custom input</label>
+        <label for="wordSetSelect">Choose a template mission to edit</label>
         <select id="wordSetSelect"></select>
         <textarea id="customTextInput" placeholder="Enter custom text..." style="display: none;"></textarea>
-        <label for="searchWord">Select or Enter Word(s) to Replace:</label>
-        <select id="searchWordSelect">
-            <option value="{systemname}">System Name</option>
-            <option value="custom">Custom Word...</option>
-        </select>
+        
+        <!-- Flex container for search word and replace word input -->
+        <div class="flex-container">
+            <div class="flex-item">
+                <label for="searchWordSelect1">Replace System Name:</label>
+                <select id="searchWordSelect1">
+                    <option value="{systemname}">System Name</option>
+                    <!--<option value="custom">Custom Word...</option>-->
+                </select>
+            </div>
+            <div class="flex-item">
+                <label for="replaceWord1">What system?:</label>
+                <input type="text" id="replaceWord1" required>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="flex-item">
+                <label for="searchWordSelect2">Replace Faction Name:</label>
+                <select id="searchWordSelect2">
+                    <option value="{factionname}">Faction Name</option>
+                    <!--<option value="custom">Custom Word...</option>-->
+                </select>
+            </div>
+            <div class="flex-item">
+                <label for="replaceWord2">Supporting Who? (Leave it blank for Wolves of Jonai):</label>
+                <input type="text" id="replaceWord2">
+            </div>
+        </div>
+    
         <input type="text" id="searchWord" placeholder="Enter Custom Word..." style="display: none;">
-        <label for="replaceWord">Replacement Word:</label>
-        <input type="text" id="replaceWord" required>
+    
         <button type="submit">Replace Words</button>
     </form>
-    <div class="button-container">
+    
+    <div class="button-container-bottom">
         <button id="copyButton" class="toggle-button">Copy Replaced Text</button>
         <button id="copyTitleButton" class="toggle-button">Copy Title</button>
     </div>
     <div id="output"></div>
-    <div id="titleOutput"></div>
+    <div id="titleOutput"></div>  
 </div>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-    fetch('missions.json')
-        .then(response => response.json())
-        .then(data => {
-            const missionSelect = document.getElementById('wordSetSelect');
-            data.missions.forEach(mission => {
-                const option = document.createElement('option');
-                option.value = mission.value;  // Use the raw value directly
-                option.textContent = mission.name;
-                missionSelect.appendChild(option);
-            });
-            document.getElementById('customTextInput').style.display = 'none';
-            document.getElementById('wordSetSelect').style.display = 'block';
-            document.getElementById('toggleButton').textContent = 'Use Custom Input';
-        })
-        .catch(error => console.error('Error fetching missions:', error));
-
-    const missionText = document.getElementById('missionText'); // Assuming this is your textarea/input for mission text
-
-    document.getElementById('wordSetSelect').addEventListener('change', function() {
-        const selectedValue = this.value;
-        missionText.value = selectedValue;  // Assign the selected value directly
-    });
-    fetch('https://elitebgs.app/api/ebgs/v5/ticks')
-    .then(response => response.json())
-    .then(data => {
-        const timestamp = data[0].time; // Assuming the timestamp is provided in UTC format like "2024-06-11T01:12:35.000Z"
-        const date = new Date(timestamp);
-        
-        // Get local date and time string
-        const localDateTimeString = date.toLocaleString();
-
-        // Update the button text with the formatted timestamp
-        document.getElementById('infoButton').textContent = `Last Tick: ${localDateTimeString}\n(Your Local Time)`;
-    })
-    .catch(error => {
-        console.error('Error fetching last tick:', error);
-        document.getElementById('infoButton').textContent = 'Failed to fetch last tick';
-    });
-});
-
-    document.getElementById('toggleButton').addEventListener('click', function() {
-        var customTextInput = document.getElementById('customTextInput');
-        var wordSetSelect = document.getElementById('wordSetSelect');
-        var toggleButton = document.getElementById('toggleButton');
-
-        if (customTextInput.style.display === 'none') {
-            customTextInput.style.display = 'block';
-            wordSetSelect.style.display = 'none';
-            toggleButton.textContent = 'Use Predefined Missions';
-        } else {
-            customTextInput.style.display = 'none';
-            wordSetSelect.style.display = 'block';
-            toggleButton.textContent = 'Use Custom Input';
-        }
-    });
-
-    document.getElementById('searchWordSelect').addEventListener('change', function() {
-        var searchWord = document.getElementById('searchWord');
-        if (this.value === 'custom') {
-            searchWord.style.display = 'block';
-            searchWord.required = true;
-        } else {
-            searchWord.style.display = 'none';
-            searchWord.required = false;
-        }
-    });
-
-    document.getElementById('wordReplacerForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        var inputType = document.querySelector('input[name="inputType"]:checked').value;
-        var text;
-        if (inputType === 'predefined') {
-            text = document.getElementById('wordSetSelect').value;
-        } else {
-            text = document.getElementById('customTextInput').value;
-        }
-
-        var searchWordSelect = document.getElementById('searchWordSelect').value;
-        var searchWord = (searchWordSelect === 'custom') ? document.getElementById('searchWord').value : searchWordSelect;
-        var replaceWord = document.getElementById('replaceWord').value;
-
-        var regex = new RegExp(searchWord, 'g');
-        var replacedText = text.replace(regex, replaceWord);
-
-        document.getElementById('output').textContent = replacedText;
-    });
-
-    document.getElementById('copyButton').addEventListener('click', function() {
-        var output = document.getElementById('output').textContent;
-        navigator.clipboard.writeText(output).then(() => {
-            document.getElementById('copyButton').classList.add('copy-animation');
-            setTimeout(() => {
-                document.getElementById('copyButton').classList.remove('copy-animation');
-            }, 1100);
-        }).catch(err => console.error('Error copying text:', err));
-    });
-
-    document.getElementById('copyTitleButton').addEventListener('click', function() {
-        var output = document.getElementById('output').textContent;
-        var title = output.split('|')[0].trim();
-        navigator.clipboard.writeText(title).then(() => {
-            document.getElementById('copyTitleButton').classList.add('copy-animation');
-            setTimeout(() => {
-                document.getElementById('copyTitleButton').classList.remove('copy-animation');
-            }, 1100);
-        }).catch(err => console.error('Error copying title:', err));
-    });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
