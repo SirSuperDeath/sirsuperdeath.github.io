@@ -1,46 +1,65 @@
+/* Define CSS Variables */
+:root {
+    --background-color: #2c3e50;
+    --container-background: #34495e;
+    --primary-color: #3498db;
+    --primary-hover: #2980b9;
+    --text-color: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --input-background: #2c3e50;
+    --animation-color-start: #ce70a4;
+    --animation-color-mid: #9640ce;
+    --animation-color-end: #1270ce;
+}
+
+/* Global Styles */
 body {
     font-family: Helvetica, sans-serif;
-    background-color: #2c3e50; /* Dark blue background */
-    color: #fff; /* White font color */
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
+/* Container Styles */
 .container {
-    width: 90%; /* Adjusted width */
-    max-width: 900px; /* Maximum width */
+    width: 90%;
+    max-width: 900px;
     padding: 20px;
     border-radius: 10px;
-    background-color: #34495e; /* Darker blue container */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    background-color: var(--container-background);
+    box-shadow: 0 0 20px var(--shadow-color);
+    transform: scale(1.2);
 }
 
+/* Header Styles */
 h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.button-container-top {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
+/* Button Container Styles */
+.button-container-top,
 .button-container-bottom {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
 }
 
 .button-container-top a,
-.info-button {
+.info-button,
+button,
+.toggle-button {
     flex: 1;
-    margin: 0 10px;
+    margin: 10px;
     padding: 10px 20px;
-    background-color: #3498db; /* Blue button color */
-    color: #fff; /* White font color */
+    background-color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
     border: none;
     border-radius: 5px;
@@ -50,10 +69,13 @@ h2 {
 }
 
 .button-container-top a:hover,
-.info-button:hover {
-    background-color: #2980b9; /* Darker blue on hover */
+.info-button:hover,
+button:hover,
+.toggle-button:hover {
+    background-color: var(--primary-hover);
 }
 
+/* Form Styles */
 form {
     display: flex;
     flex-direction: column;
@@ -61,22 +83,35 @@ form {
 
 .flex-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Align items at the top */
+    flex-direction: column;
     margin-bottom: 10px;
+}
+
+@media (min-width: 600px) {
+    .flex-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 }
 
 .flex-item {
     flex: 1;
-    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
-.flex-item:last-child {
-    margin-right: 0;
+@media (min-width: 600px) {
+    .flex-item {
+        margin-right: 10px;
+    }
+    .flex-item:last-child {
+        margin-right: 0;
+    }
 }
 
+/* Input and Label Styles */
 label {
-    display: block; /* Ensure labels are block-level */
+    display: block;
     margin-bottom: 5px;
 }
 
@@ -88,62 +123,33 @@ textarea {
     margin-bottom: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #2c3e50; /* Dark blue input background */
-    color: #fff; /* White font color */
-    box-sizing: border-box; /* Include padding and border in width calculation */
-}
-
-input[type="text"] {
-    width: calc(100% - 0px); /* Adjusted width */
+    background-color: var(--input-background);
+    color: var(--text-color);
+    box-sizing: border-box;
 }
 
 select {
-    appearance: none; /* Remove default appearance */
+    appearance: none;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #3498db; /* Blue button color */
-    color: #fff; /* White font color */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-bottom: 10px;
-}
-
-button:hover {
-    background-color: #2980b9; /* Darker blue on hover */
-}
-
-#output {
-    margin-top: 20px;
-    color: #fff; /* White font color for output text */
-}
-
+/* Output Styles */
+#output,
 .title-output {
-    color: #fff; /* White font color for title output text */
+    margin-top: 20px;
+    color: var(--text-color);
 }
 
+/* Toggle Button Styles */
 .toggle-button {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 8px 20px;
     width: 100%;
-    background-color: #3498db; /* Blue button color */
-    color: #fff; /* White font color */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
     margin-bottom: 10px;
 }
 
-.toggle-button:hover {
-    background-color: #2980b9; /* Darker blue on hover */
-}
-
+/* Copy Animation */
 .copy-animation {
     animation-name: copyAnimation;
     animation-duration: 1.10s;
@@ -151,32 +157,30 @@ button:hover {
 
 @keyframes copyAnimation {
     0% {
-        background-color: #ce70a4;
-    }
+        background-color: var(--animation-color-start);
     }
     50% {
-        background-color: #9640ce;
-    }
+        background-color: var(--animation-color-mid);
     }
     100% {
-        background-color: #1270ce;
+        background-color: var(--animation-color-end);
     }
 }
 
-}
+/* Tick Button Styles */
 .tick-button {
-background-color: #1270ce; /* Button background color */
-color: #FFFFFF; /* Text color */
-border: none;
-border-radius: 5px;
-padding: 10px 40px; /* Increased padding */
-font-size: 16px;
-cursor: pointer;
-transition: background-color 0.3s;
-display: flex;
-align-items: center;
-min-width:230px; /* Minimum width */
-justify-content: center; /* Center the text horizontally */
+    background-color: var(--animation-color-end);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    min-width: 230px;
+    justify-content: center;
 }
 
 .tick-icon {
@@ -189,4 +193,36 @@ justify-content: center; /* Center the text horizontally */
     text-align: center;
 }
 
+/* Responsive Media Queries */
+@media (max-width: 800px) {
+    .container {
+        transform: scale(1); /* Reset scale for smaller screens */
+        padding: 15px;
+    }
 
+    .button-container-top,
+    .button-container-bottom {
+        flex-direction: column;
+    }
+
+    .button-container-top a,
+    .info-button,
+    button,
+    .toggle-button {
+        margin: 5px 0;
+        padding: 10px;
+    }
+
+    .tick-button {
+        padding: 10px 20px;
+        min-width: auto;
+    }
+
+    .tick-icon {
+        font-size: 18px;
+    }
+
+    .tick-time {
+        font-size: 14px;
+    }
+}
