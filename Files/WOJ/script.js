@@ -31,23 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('infoButton').textContent = 'Failed to fetch last tick';
         });
 
-    // Toggle between predefined and custom input
-    // document.getElementById('toggleButton').addEventListener('click', function() {
-    //    var customTextInput = document.getElementById('customTextInput');
-    //    var wordSetSelect = document.getElementById('wordSetSelect');
-    //    var toggleButton = document.getElementById('toggleButton');
-    //
-    //    if (customTextInput.style.display === 'none') {
-    //        customTextInput.style.display = 'block';
-    //        wordSetSelect.style.display = 'none';
-    //        toggleButton.textContent = 'Use Predefined Missions';
-    //    } else {
-    //        customTextInput.style.display = 'none';
-    //        wordSetSelect.style.display = 'block';
-    //        toggleButton.textContent = 'Use Custom Input';
-    //    }
-    //});
-
     // Show custom input fields based on selection
     document.getElementById('searchWordSelect1').addEventListener('change', function() {
         var searchWord = document.getElementById('searchWord');
@@ -66,13 +49,12 @@ document.addEventListener('DOMContentLoaded', function() {
             replaceWord2Input.style.display = 'block';
             replaceWord2Input.required = true;
         } else {
-            replaceWord2Input.style.display = 'none';
+            replaceWord2Input.style.display = 'block'; // Always show the replaceWord2 input
             replaceWord2Input.required = false;
         }
     });
 
     // Form submission handling
-    // Modify this block to work only with predefined missions
     document.getElementById('wordReplacerForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
@@ -97,6 +79,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Extract the title from the data attribute of the selected option
         var selectedOption = document.getElementById('wordSetSelect').selectedOptions[0];
         var missionTitle = selectedOption ? selectedOption.dataset.title : '';
+        
+        // Insert [PENDING] after the first bracketed segment ([INF])
+        if (document.getElementById('pendingCheckbox').checked) {
+            var firstBracketEnd = missionTitle.indexOf(']') + 1;
+            missionTitle = missionTitle.slice(0, firstBracketEnd) + ' [PENDING]' + missionTitle.slice(firstBracketEnd);
+        }
+
         document.getElementById('titleOutput').textContent = missionTitle;
     });
 
@@ -126,9 +115,14 @@ document.addEventListener('DOMContentLoaded', function() {
         var searchWordSelect1 = document.getElementById('searchWordSelect1').value;
         var replaceWord1 = document.getElementById('replaceWord1').value;
 
-        var defaultFactionName = 'Wolves Of Jonai';
         var regex1 = new RegExp(searchWordSelect1, 'g');
-        var replacedText1 = titleTemplate.replace(regex1, replaceWord1 || defaultFactionName);
+        var replacedText1 = replacedTitle.replace(regex1, replaceWord1 || defaultFactionName);
+
+        // Insert [PENDING] after the first bracketed segment ([INF])
+        if (document.getElementById('pendingCheckbox').checked) {
+            var firstBracketEnd = replacedText1.indexOf(']') + 1;
+            replacedText1 = replacedText1.slice(0, firstBracketEnd) + ' [PENDING]' + replacedText1.slice(firstBracketEnd);
+        }
 
         navigator.clipboard.writeText(replacedText1).then(function() {
             console.log('Title copied to clipboard');
@@ -142,16 +136,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Initial setup based on default selection
-    document.addEventListener('DOMContentLoaded', function() {
-        var searchWordSelect2 = document.getElementById('searchWordSelect2').value;
-        var replaceWord2Input = document.getElementById('replaceWord2');
-        
-        if (searchWordSelect2 === 'custom') {
-            replaceWord2Input.style.display = 'block';
-            replaceWord2Input.required = true;
-        } else {
-            replaceWord2Input.style.display = 'none';
-            replaceWord2Input.required = false;
-        }
-    });
+    var searchWordSelect2 = document.getElementById('searchWordSelect2').value;
+    var replaceWord2Input = document.getElementById('replaceWord2');
+    
+    if (searchWordSelect2 === 'custom') {
+        replaceWord2Input.style.display = 'block';
+        replaceWord2Input.required = true;
+    } else {
+        replaceWord2Input.style.display = 'block'; // Ensure this is set to 'block' initially
+        replaceWord2Input.required = false;
+    }
 });
