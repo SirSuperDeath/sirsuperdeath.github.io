@@ -22,6 +22,7 @@
     <!-- New buttons -->
     <div class="button-container-top">
         <a href="https://inara.cz/elite/squadron-mission-add/380/" target="_blank">WOJ Mission Writer</a>
+        <a href="https://inara.cz/elite/minorfaction/31555/" target="_blank">Conflicts</a>
         <a href="https://elitebgs.app/tick" id="infoButton" class="tick-button">
             <span class="tick-icon">⏰</span>
             <span id="tickTime" class="tick-time">Loading...</span>
@@ -35,6 +36,10 @@
         <select id="wordSetSelect"></select>
         <textarea id="customTextInput" placeholder="Enter custom text..." style="display: none;"></textarea>
         
+        <div class="checkbox-container">
+            <input type="checkbox" id="pendingCheckbox">
+            <label for="pendingCheckbox">Is Mission Pending? (Tick the box if it is)</label>
+        </div>
         <!-- Flex container for search word and replace word input -->
         <div class="flex-container">
             <div class="flex-item">
@@ -65,10 +70,7 @@
     
         <input type="text" id="searchWord" placeholder="Enter Custom Word..." style="display: none;">
         
-        <div class="checkbox-container">
-            <input type="checkbox" id="pendingCheckbox">
-            <label for="pendingCheckbox">Is Mission Pending? (Tick the box if it is)</label>
-        </div>
+       
         
         <div class="button-container-bottom">
             <button type="submit">Replace Words</button>

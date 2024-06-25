@@ -139,6 +139,7 @@ select {
 .checkbox-container {
     display: flex;
     align-items: center;
+    margin-top: auto;
     margin-bottom: 10px;
 }
 
