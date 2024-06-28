@@ -6,6 +6,8 @@
  * @source https://github.com/SirSuperDeath
  * @website https://sirsuperdeath.github.io
  */
+
+@import url(https://raw.githubusercontent.com/MrDiamondDog/noUglyIconsTheme/master/theme.css);
 @import url(https://sirsuperdeath.github.io/Files/Super/SSD.css);
 @import url(https://sirsuperdeath.github.io/Files/S/SuperImport.css);
 
@@ -18,9 +20,22 @@
 {
   display: none;
 }
+
+[class*=channelTextAreaDisabled] {
+  display: none!important;
+}
+
+/* or if it doesn't work like because of themes: */
+[class*=channelTextAreaDisabled] {
+  opacity: 0!important;
+  position: absolute!important;
+  height: 0px!important;
+  width: 0px!important;
+  z-index: 0!important;
+}
+
 /*Gift Button Hider Snippet*/
-.channelTextArea__648e5 .buttons__7ecff .button-38aScr[tabindex="0"]:first-child,
-.channelTextArea__648e5 .buttons__7ecff .buttonWrapper_bd4bd7+.buttonWrapper_bd4bd7[tabindex="0"] {
+button:has([d="M4 6a4 4 0 0 1 4-4h.09c1.8 0 3.39 1.18 3.91 2.9A4.09 4.09 0 0 1 15.91 2H16a4 4 0 0 1 3.46 6H20a2 2 0 0 1 2 2v1.5a.5.5 0 0 1-.5.5h-19a.5.5 0 0 1-.5-.5V10c0-1.1.9-2 2-2h.54A3.98 3.98 0 0 1 4 6Zm12 2a2 2 0 1 0 0-4h-.09c-.96 0-1.8.65-2.02 1.58L13.29 8H16Zm-5.89-2.42.6 2.42H8a2 2 0 1 1 0-4h.09c.96 0 1.8.65 2.02 1.58Z"]) {
   display: none;
 }
 
@@ -185,7 +200,7 @@ svg[class*="avatarDecorationHint"] {
 }
 
 [class^="userPopoutInner"] [class^="wrapper"] [class^="banner"],
-[class^="avatarDecoration"],
+[class^='avatarDecoration_'], [class^='profileEffects_'],
 [mask^="url(#svg-mask-avatar-decoration-status"],
 [class*="bannerSVGWrapper"] mask image {
   display: none;
