@@ -1,113 +1,115 @@
 /* Hiding Things Area*/
 /* Hides Textbox when you don't have permission to talk in the channel */
-.channelTextAreaDisabled-1p2fQv > div {
-    display: none
-  }
+.channelTextAreaDisabled_d0696b > div {
+  display: none
+}
 /*Gift Button Hider Snippet*/
-.channelTextArea-1VQBuV .buttons-uaqb-5 .button-38aScr[tabindex="0"]:first-child,
-  .channelTextArea-1VQBuV .buttons-uaqb-5 .buttonWrapper-3YFQGJ + .buttonWrapper-3YFQGJ[tabindex="0"] {
-      display:none;
-  }
-  .channelTextArea-1VQBuV .buttonContainer-2lnNiN .button-38aScr {
-      display:block !important;
-  }
- /* Remove anoyying light up avatar when talking */
- .avatarSpeaking-33RRJU {
-  display: none;
+.channelTextArea_d0696b .buttons_d0696b .button-38aScr[tabindex="0"]:first-child,
+.channelTextArea_d0696b .buttons_d0696b .buttonWrapper_cecf00 + .buttonWrapper_cecf00[tabindex="0"] {
+    display:none;
+}
+.channelTextArea_d0696b .buttonContainer_d0696b .button-38aScr {
+    display:block !important;
+}
+/* Remove anoyying light up avatar when talking */
+.avatarSpeaking-33RRJU {
+display: none;
 }
 /* Hide Active and show on hover*/
-.nowPlayingColumn-1eCBCN {
-  position: relative;
-  left: 350px ;
-  opacity: 1;
-  margin-left: -350px;
-  transition: .3s all ease-out;}
-.nowPlayingColumn-1eCBCN:hover {
-  left: 0 ;
-  opacity: 1;
-  margin-left: 0;
-  transition: .3s all ease-out;}
+.nowPlayingColumn_c2739c {
+position: relative;
+left: 350px ;
+opacity: 1;
+margin-left: -350px;
+transition: .3s all ease-out;}
+.nowPlayingColumn_c2739c:hover {
+left: 0 ;
+opacity: 1;
+margin-left: 0;
+transition: .3s all ease-out;}
 /* Noise Suppression Button Hider*/
 [aria-label="Noise suppression powered by Krisp"] {
-  display: none;
+display: none;
 }
 /* Hide the live text to just be a Dot (due to the text taking up too much space)*/
-  .liveSmall-1Urjcy {
-    font-size: 0px;
-  }
+.liveSmall_e17fae {
+  font-size: 0px;
+}
 /* Remove Seperator between Home and Guilds */
 .guildSeparator-3s64Iy {
-    display: none;
-  }
-/* Remove Stage Discovery */
-.channel-1Shao0[href="/discovery"] {
   display: none;
+}
+/* Remove Stage Discovery */
+.channel_c91bad[href="/discovery"] {
+display: none;
 }
 /* Hide Invite to server button on user right click */
 .colorDefault-CDqZdO[id="user-context-invite-to-server"] {
-      display: none;
-  }
+    display: none;
+}
 /* Hide Add note button on user right click*/
 .colorDefault-CDqZdO[id="user-context-note"] {
-  display: none;
+display: none;
 }
 /* Hide Call user button on user right click */
-  .colorDefault-CDqZdO[id="user-context-call"] {
-      display: none;
-  }
+.colorDefault-CDqZdO[id="user-context-call"] {
+    display: none;
+}
 /* Hide Call user button on user right click */
 .colorDefault-CDqZdO[id="user-context-block"] {
-  display: none;
+display: none;
 }
 
 /* Hide Discord logo */
-.wordmarkWindows-2dq6rw svg {display: none;}
+.wordmarkWindows_a934d8 svg {display: none;}
 
-.container-2RRFHK {
-  /* You may need to adjust this */
-  --translate-px: -389px;
-  height: 1px;
-  transform: translateY(var(--translate-px));
-  background: transparent;
+.container_e40c16 {
+/* You may need to adjust this */
+--translate-px: -389px;
+height: 1px;
+transform: translateY(var(--translate-px));
+background: transparent;
 }
-.container-2RRFHK::before {
-  content: 'You are offline!';
-  top: 0.5px;
-  position: absolute;
-  font-weight: 900;
-  font-size: smaller;
-  color: var(--info-danger-foreground);
-  text-transform: uppercase;
+.container_e40c16::before {
+content: 'You are offline!';
+top: 0.5px;
+position: absolute;
+font-weight: 900;
+font-size: smaller;
+color: var(--info-danger-foreground);
+text-transform: uppercase;
 }
-.container-2RRFHK > .content-3AIQZv,
-.container-2RRFHK > .problems-CvGwpb {
-  display: none;
+.container_e40c16 > .content_e40c16,
+.container_e40c16 > .problems_e40c16 {
+display: none;
 }
 /* Hiding the emote icon and gif icon behind the send file icon untill you hover over it*/
-.buttons-uaqb-5 {opacity: 0; transition: opacity 0.1s;}
-.channelTextArea-1VQBuV:hover .buttons-uaqb-5 {opacity: 1.0;}
+.buttons_d0696b {opacity: 0; transition: opacity 0.1s;}
+.channelTextArea_d0696b:hover .buttons_d0696b {opacity: 1.0;}
 
-.attachWrapper-3slhXI {order:1; margin-left:9px;}
-.attachButton-_ACFSu {padding-right:0px}
+.attachWrapper_f298d4 {order:1; margin-left:9px;}
+.attachButton_f298d4 {padding-right:0px}
 
-.uploadModal-2ie9O_ .buttons-uaqb-5 {opacity: 1.0;}
+.uploadModal_f82cc7 .buttons_d0696b {opacity: 1.0;}
 
 
 /* Doing this just incase they change the class again */
 [aria-label="Help"] {
-  display: none; 
+display: none; 
 }
 /* Hide Mute/Deafen buttons when not in a voice call (Original from Zerthox) 
-  .container-YkUktl .button-12Fmur:first-child,
-  .container-YkUktl .button-12Fmur:nth-child(2),
-  .container-YkUktl .button-12Fmur:nth-child(3)::before {
-      display:none;
-  }
-  .container-1zzFcN + .container-YkUktl .button-12Fmur:first-child,
-  .container-1zzFcN + .container-YkUktl .button-12Fmur:nth-child(2),
-  .container-1zzFcN + .container-YkUktl .button-12Fmur:nth-child(3)::before {
-      display: flex;
-  }
+.container_b2ca13 .button_f67531:first-child,
+.container_b2ca13 .button_f67531:nth-child(2),
+.container_b2ca13 .button_f67531:nth-child(3)::before {
+    display:none;
+}
+.container_adcaac + .container_b2ca13 .button_f67531:first-child,
+.container_adcaac + .container_b2ca13 .button_f67531:nth-child(2),
+.container_adcaac + .container_b2ca13 .button_f67531:nth-child(3)::before {
+    display: flex;
+}
 */
 /* Hide Picture in Picture Streaming (if you like to see them let me know and ill move it to a diff CSS*/
-/* .pictureInPictureWindow-3ms5Zy{display:none;}
+/* .pictureInPictureWindow_d0596b{display:none;}
+
+12°
