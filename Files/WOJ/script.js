@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('infoButton').textContent = 'Failed to fetch last tick';
         });
 
-
     // Show custom input fields based on selection
     document.getElementById('searchWordSelect1').addEventListener('change', function() {
         var searchWord = document.getElementById('searchWord');
