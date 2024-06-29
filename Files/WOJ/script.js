@@ -24,12 +24,30 @@ document.addEventListener('DOMContentLoaded', function() {
             const timestamp = data[0].time; // Assuming the timestamp is provided in UTC format like "2024-06-11T01:12:35.000Z"
             const date = new Date(timestamp);
             const localDateTimeString = date.toLocaleString();
-            document.getElementById('infoButton').textContent = `Last Tick: ${localDateTimeString}\n(Your Local Time)`;
+
+            // Calculate the time difference
+            const now = new Date();
+            const timeDiff = Math.abs(now - date);
+            const diffHours = Math.floor(timeDiff / (1000 * 60 * 60));
+            const diffMinutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const diffSeconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+            let timeAgo = '';
+            if (diffHours > 0) {
+                timeAgo = `${diffHours}hrs ago`;
+            } else if (diffMinutes > 0) {
+                timeAgo = `${diffMinutes}mins ago`;
+            } else {
+                timeAgo = `${diffSeconds}secs ago`;
+            }
+
+            document.getElementById('infoButton').textContent = `Last Tick: ${localDateTimeString}\n\n(${timeAgo})`;
         })
         .catch(error => {
             console.error('Error fetching last tick:', error);
             document.getElementById('infoButton').textContent = 'Failed to fetch last tick';
         });
+
 
     // Show custom input fields based on selection
     document.getElementById('searchWordSelect1').addEventListener('change', function() {
