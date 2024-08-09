@@ -17,15 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => console.error('Error fetching missions:', error));
 
-    // Fetch last tick time
+    // Fetch last tick time (existing code remains unchanged)
     fetch('https://elitebgs.app/api/ebgs/v5/ticks')
         .then(response => response.json())
         .then(data => {
-            const timestamp = data[0].time; // Assuming the timestamp is provided in UTC format like "2024-06-11T01:12:35.000Z"
+            const timestamp = data[0].time;
             const date = new Date(timestamp);
             const localDateTimeString = date.toLocaleString();
 
-            // Calculate the time difference
             const now = new Date();
             const timeDiff = Math.abs(now - date);
             const diffHours = Math.floor(timeDiff / (1000 * 60 * 60));
@@ -48,34 +47,34 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('infoButton').textContent = 'Failed to fetch last tick';
         });
 
-    // Show custom input fields based on selection
-    document.getElementById('searchWordSelect1').addEventListener('change', function() {
-        var searchWord = document.getElementById('searchWord');
-        if (this.value === 'custom') {
-            searchWord.style.display = 'block';
-            searchWord.required = true;
-        } else {
-            searchWord.style.display = 'none';
-            searchWord.required = false;
-        }
-    });
+    // Function to add or modify the date in the mission text
+    function addDateToMissionText(text) {
+        // Get the current date
+        let currentDate = new Date();
 
-    document.getElementById('searchWordSelect2').addEventListener('change', function() {
-        var replaceWord2Input = document.getElementById('replaceWord2');
-        if (this.value === 'custom') {
-            replaceWord2Input.style.display = 'block';
-            replaceWord2Input.required = true;
-        } else {
-            replaceWord2Input.style.display = 'block'; // Always show the replaceWord2 input
-            replaceWord2Input.required = false;
-        }
-    });
+        // Check if the pending checkbox is checked
+        const isPending = document.getElementById('pendingCheckbox').checked;
 
-    // Form submission handling
+        // If pending is checked, add one day to the current date
+        if (isPending) {
+            currentDate.setDate(currentDate.getDate() + 1);
+        }
+
+        // Format the date as needed (e.g., "MM/DD/YYYY")
+        const formattedDate = currentDate.toLocaleDateString();
+
+        // Replace the {dateofmission} placeholder with the formatted date
+        return text.replace(/{dateofmission}/g, formattedDate);
+    }
+
+    // Add event listener to the form submit event
     document.getElementById('wordReplacerForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
         var text = document.getElementById('wordSetSelect').value;
+
+        // Replace {dateofmission} in the text
+        text = addDateToMissionText(text);
 
         var searchWordSelect1 = document.getElementById('searchWordSelect1').value;
         var replaceWord1 = document.getElementById('replaceWord1').value;
@@ -104,9 +103,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         document.getElementById('titleOutput').textContent = missionTitle;
+
+        // Add the date based on the pending checkbox status
+        addDate();
     });
 
-    // Copy replaced text to clipboard
+    // Copy replaced text to clipboard (existing code)
     document.getElementById('copyButton').addEventListener('click', function() {
         var outputText = document.getElementById('output').textContent;
         navigator.clipboard.writeText(outputText).then(function() {
@@ -116,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Copy title with replaced values to clipboard
+    // Copy title with replaced values to clipboard (existing code)
     document.getElementById('copyTitleButton').addEventListener('click', function() {
         var selectedOption = document.getElementById('wordSetSelect').selectedOptions[0];
         var titleTemplate = selectedOption ? selectedOption.dataset.title : '';
