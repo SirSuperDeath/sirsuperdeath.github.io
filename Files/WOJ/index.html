@@ -32,18 +32,19 @@
     <form id="wordReplacerForm">
         <input type="radio" id="predefinedInput" name="inputType" value="predefined" checked style="display: none;">
         <input type="radio" id="customInput" name="inputType" value="custom" style="display: none;">
-        <label for="wordSetSelect">Choose a template mission to edit</label>
+        <label for="wordSetSelect">Mission type?</label>
         <select id="wordSetSelect"></select>
         <textarea id="customTextInput" placeholder="Enter custom text..." style="display: none;"></textarea>
         
         <div class="checkbox-container">
             <input type="checkbox" id="pendingCheckbox">
-            <label for="pendingCheckbox">Is Mission Pending? (Tick the box if it is)</label>
+            <label for="pendingCheckbox">Is the Mission Pending? (Tick the box if it is)</label>
         </div>
         <!-- Flex container for search word and replace word input -->
         <div class="flex-container">
-            <div class="flex-item">
-                <label for="searchWordSelect1">Replacing System Name:</label>
+             <!-- Remove  display: none; if you wish to add it back -->
+            <div class="flex-item" style="display: none;>
+               <label for="searchWordSelect1">Replacing System Name:</label>
                 <select id="searchWordSelect1">
                     <option value="{systemname}">System Name</option>
                     <!--<option value="custom">Custom Word...</option>-->
@@ -55,7 +56,8 @@
             </div>
         </div>
         <div class="flex-container">
-            <div class="flex-item">
+             <!-- Remove  display: none; if you wish to add it back -->
+            <div class="flex-item" style="display: none;>
                 <label for="searchWordSelect2">Replacing Faction Name:</label>
                 <select id="searchWordSelect2">
                     <option value="{factionname}">Faction Name</option>
