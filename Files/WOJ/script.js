@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('infoButton').textContent = 'Failed to fetch last tick';
         });
 
-    // Function to add or modify the date in the mission text
-    function addDateToMissionText(text) {
+    // Function to add or modify the dates in the mission text
+    function addDatesToMissionText(text) {
         // Get the current date
         let currentDate = new Date();
 
@@ -60,11 +60,19 @@ document.addEventListener('DOMContentLoaded', function() {
             currentDate.setDate(currentDate.getDate() + 1);
         }
 
-        // Format the date as needed (e.g., "MM/DD/YYYY")
-        const formattedDate = currentDate.toLocaleDateString();
+        // Format the start date as needed (e.g., "MM/DD/YYYY")
+        const formattedStartDate = currentDate.toLocaleDateString();
 
-        // Replace the {dateofmission} placeholder with the formatted date
-        return text.replace(/{dateofmission}/g, formattedDate);
+        // Calculate the end date (7 days after the start date)
+        let endDate = new Date(currentDate);
+        endDate.setDate(currentDate.getDate() + 7);
+        const formattedEndDate = endDate.toLocaleDateString();
+
+        // Replace the {dateofmission} placeholder with the formatted start date
+        // Replace the {enddateofmission} placeholder with the formatted end date
+        return text
+            .replace(/{dateofmission}/g, formattedStartDate)
+            .replace(/{enddateofmission}/g, formattedEndDate);
     }
 
     // Add event listener to the form submit event
@@ -73,8 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         var text = document.getElementById('wordSetSelect').value;
 
-        // Replace {dateofmission} in the text
-        text = addDateToMissionText(text);
+        // Replace {dateofmission} and {enddateofmission} in the text
+        text = addDatesToMissionText(text);
 
         var searchWordSelect1 = document.getElementById('searchWordSelect1').value;
         var replaceWord1 = document.getElementById('replaceWord1').value;
@@ -103,9 +111,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         document.getElementById('titleOutput').textContent = missionTitle;
-
-        // Add the date based on the pending checkbox status
-        addDate();
     });
 
     // Copy replaced text to clipboard (existing code)
