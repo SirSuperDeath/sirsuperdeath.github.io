@@ -39,6 +39,13 @@ body {
     transform: scale(1.2);
 }
 
+@media (max-width: 800px) {
+    .container {
+        transform: scale(1);
+        padding: 15px;
+    }
+}
+
 /* Header Styles */
 h2 {
     text-align: center;
@@ -51,10 +58,11 @@ h2 {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+    flex-wrap: wrap;
 }
 
 .button-container-top a,
+.button-container-bottom a,
 .info-button,
 button,
 .toggle-button {
@@ -72,10 +80,27 @@ button,
 }
 
 .button-container-top a:hover,
+.button-container-bottom a:hover,
 .info-button:hover,
 button:hover,
 .toggle-button:hover {
     background-color: var(--primary-hover);
+}
+
+@media (max-width: 800px) {
+    .button-container-top,
+    .button-container-bottom {
+        flex-direction: column;
+    }
+
+    .button-container-top a,
+    .button-container-bottom a,
+    .info-button,
+    button,
+    .toggle-button {
+        margin: 5px 0;
+        padding: 10px;
+    }
 }
 
 /* Form Styles */
@@ -107,6 +132,7 @@ form {
     .flex-item {
         margin-right: 10px;
     }
+
     .flex-item:last-child {
         margin-right: 0;
     }
@@ -123,9 +149,7 @@ select,
 textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
     border: none;
-    border-radius: 5px;
     background-color: var(--input-background);
     color: var(--text-color);
     box-sizing: border-box;
@@ -135,16 +159,15 @@ select {
     appearance: none;
 }
 
-/* Checkbox Container Styles */
+/* Checkbox Styles */
 .checkbox-container {
     display: flex;
     align-items: center;
-    margin-top: auto;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .checkbox-container input[type="checkbox"] {
-    margin-right: 10px;
+    margin-right: 5px;
     width: 20px;
     height: 20px;
     border-radius: 5px;
@@ -184,8 +207,7 @@ select {
 
 /* Copy Animation */
 .copy-animation {
-    animation-name: copyAnimation;
-    animation-duration: 1.10s;
+    animation: copyAnimation 1.1s;
 }
 
 @keyframes copyAnimation {
@@ -226,26 +248,7 @@ select {
     text-align: center;
 }
 
-/* Responsive Media Queries */
 @media (max-width: 800px) {
-    .container {
-        transform: scale(1); /* Reset scale for smaller screens */
-        padding: 15px;
-    }
-
-    .button-container-top,
-    .button-container-bottom {
-        flex-direction: column;
-    }
-
-    .button-container-top a,
-    .info-button,
-    button,
-    .toggle-button {
-        margin: 5px 0;
-        padding: 10px;
-    }
-
     .tick-button {
         padding: 10px 20px;
         min-width: auto;
@@ -259,4 +262,3 @@ select {
         font-size: 14px;
     }
 }
-
