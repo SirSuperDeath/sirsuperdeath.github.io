@@ -158,6 +158,19 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Error copying title:', error);
         });
     });
+        // Add event listener for copying the system name
+        document.getElementById('copySystemNameButton').addEventListener('click', function() {
+            var systemName = document.getElementById('replaceWord1').value; // Get the system name value
+            if (systemName) {
+                navigator.clipboard.writeText(systemName).then(function() {
+                    console.log('System name copied to clipboard');
+                }).catch(function(error) {
+                    console.error('Error copying system name:', error);
+                });
+            } else {
+                console.error('System name is empty');
+            }
+        });
 
     // Initial setup based on default selection
     var searchWordSelect2 = document.getElementById('searchWordSelect2').value;
