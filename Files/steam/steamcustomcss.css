@@ -1,0 +1,63 @@
+._11cYvnWDwOeGdlUpfGNlYt ._3CJctA7pLVdwHzNF5JmORE._1urF0O1V4DZOkjI28mDvRK {
+    padding: 16px 0 16px 24px;
+}
+
+.LibraryDisplaySizeMedium ._17uEBe5Ri8TMsnfELvs8-N {
+    height: auto !important;
+}
+
+._3YO5BpDmZERh_G8kaWbaSJ.Panel {
+    display: flex;
+    flex-direction: column;
+    margin: 0 !important;
+}
+
+.B-vCdL38RiJlhfSRgZv78 {
+    display: none;
+}
+
+.aqYQCF7Ny9x3EKcjCOTRY {
+    order: 2;
+    margin-bottom: 0 !important;
+}
+
+._3_xMyCJAh_Dv99KgZ54P3j {
+    position: unset !important;
+    margin: 0 0 6px !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+}
+._3SkuN_ykQuWGF94fclHdhJ {
+    display: none;
+}
+._2jphjrSifC6orDT4g_7Wd {
+    display: none;
+}
+/* Hide Add Game */
+._2foCkpRXhqq0UGVE50BWqj {
+    display: none;
+}
+/*
+! Downloadbar
+*/
+._1_yS5UP7el0aN4vntx3dx {
+    visibility: hidden;
+    height: 0;
+}
+._1_yS5UP7el0aN4vntx3dx:has(.yZ55NhARZGx1Awk2qs8pS) {
+    visibility: visible;
+    height: unset;
+}
+
+._1_yS5UP7el0aN4vntx3dx>div:has(._2iJsgdTIX9Tj23rWnB7Q-c) {
+    display: none;
+}
+
+._3vCzSrrXZzZjVJFZNg9SGu {
+    flex: unset;
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: rgb(var(--color-2));
+    box-shadow: none !important;
+}
