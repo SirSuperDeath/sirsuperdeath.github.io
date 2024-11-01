@@ -554,13 +554,13 @@ body {
       rgba(10, 10, 10, 0.3),
       rgb(10, 10, 10, 1)
     ),
-    url("https://b.catgirlsare.sexy/LHXRQP9tFj0i.png");
+    url("https://i.imgur.com/dFkXBfH.jpeg");
   --background-background: linear-gradient(
       0deg,
       rgba(10, 10, 10, 1),
       rgba(10, 10, 10, 0.6)
     ),
-    url("https://b.catgirlsare.sexy/LHXRQP9tFj0i.png") center center fixed;
+    url("https://i.imgur.com/dFkXBfH.jpeg") center center fixed;
   --height: 50vh;
 }
 
@@ -591,6 +591,6 @@ body {
         rgba(10, 10, 10, 1),
         rgba(10, 10, 10, 0)
       ),
-      url("https://b.catgirlsare.sexy/LHXRQP9tFj0i.png") !important;
+      url("https://i.imgur.com/dFkXBfH.jpeg") !important;
   }
 }
