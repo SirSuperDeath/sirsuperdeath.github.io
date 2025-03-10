@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => console.error('Error fetching missions:', error));
 
-    fetch('http://tick.infomancer.uk/galtick.json')
+    fetch('https://api.allorigins.win/raw?url=http://tick.infomancer.uk/galtick.json')
     .then(response => response.json())
     .then(data => {
         console.log("Fetched tick data:", data); // Debugging log
