@@ -17,14 +17,29 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => console.error('Error fetching missions:', error));
 
-    // Fetch last tick time (existing code remains unchanged)
-    fetch('https://elitebgs.app/api/ebgs/v5/ticks')
+    // Get today's date in YYYY-MM-DD format
+    const today = new Date().toISOString().slice(0, 10);
+
+    // Get the current month dynamically
+    const currentMonth = new Date().toISOString().slice(0, 7);
+    const apiUrl = `https://tick.edcd.io/api/ticks?start=${currentMonth}`;
+
+    fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            const timestamp = data[0].time;
-            const date = new Date(timestamp);
+            // Filter ticks to only include today's ticks
+            const todayTicks = data.filter(tick => tick.TIME.startsWith(today));
+
+            if (todayTicks.length === 0) {
+                throw new Error("No tick data available for today");
+            }
+
+            // Get the latest tick for today
+            const latestTick = todayTicks[todayTicks.length - 1].TIME;
+            const date = new Date(latestTick);
             const localDateTimeString = date.toLocaleString();
 
+            // Calculate time difference
             const now = new Date();
             const timeDiff = Math.abs(now - date);
             const diffHours = Math.floor(timeDiff / (1000 * 60 * 60));
@@ -40,12 +55,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 timeAgo = `${diffSeconds}secs ago`;
             }
 
+            // Update the button text with the latest tick info
             document.getElementById('infoButton').textContent = `Last Tick: ${localDateTimeString}\n\n(${timeAgo})`;
         })
         .catch(error => {
             console.error('Error fetching last tick:', error);
-            document.getElementById('infoButton').textContent = 'Failed to fetch last tick';
+            document.getElementById('infoButton').textContent = 'No tick today or failed to fetch';
         });
+
 
     // Function to add or modify the dates in the mission text
     function addDatesToMissionText(text) {
