@@ -17,51 +17,38 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => console.error('Error fetching missions:', error));
 
-    // Get today's date in YYYY-MM-DD format
-    const today = new Date().toISOString().slice(0, 10);
+    fetch('http://tick.infomancer.uk/galtick.json')
+    .then(response => response.json())
+    .then(data => {
+        console.log("Fetched tick data:", data); // Debugging log
 
-    // Get the current month dynamically
-    const currentMonth = new Date().toISOString().slice(0, 7);
-    const apiUrl = `https://tick.edcd.io/api/ticks?start=${currentMonth}`;
+        // Attempt to extract the timestamp from known structures
+        const timestamp = data.lastGalaxyTick || (Array.isArray(data) && data[0]?.time);
+        
+        if (!timestamp) throw new Error("No valid tick timestamp found.");
 
-    fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            // Filter ticks to only include today's ticks
-            const todayTicks = data.filter(tick => tick.TIME.startsWith(today));
+        const date = new Date(timestamp);
+        if (isNaN(date.getTime())) throw new Error("Invalid tick date format.");
 
-            if (todayTicks.length === 0) {
-                throw new Error("No tick data available for today");
-            }
+        const localDateTimeString = date.toLocaleString();
 
-            // Get the latest tick for today
-            const latestTick = todayTicks[todayTicks.length - 1].TIME;
-            const date = new Date(latestTick);
-            const localDateTimeString = date.toLocaleString();
+        // Calculate time difference
+        const now = new Date();
+        const timeDiff = Math.abs(now - date);
+        const diffHours = Math.floor(timeDiff / (1000 * 60 * 60));
+        const diffMinutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+        const diffSeconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
-            // Calculate time difference
-            const now = new Date();
-            const timeDiff = Math.abs(now - date);
-            const diffHours = Math.floor(timeDiff / (1000 * 60 * 60));
-            const diffMinutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-            const diffSeconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+        let timeAgo = diffHours > 0 ? `${diffHours}hrs ago` : 
+                      diffMinutes > 0 ? `${diffMinutes}mins ago` : 
+                      `${diffSeconds}secs ago`;
 
-            let timeAgo = '';
-            if (diffHours > 0) {
-                timeAgo = `${diffHours}hrs ago`;
-            } else if (diffMinutes > 0) {
-                timeAgo = `${diffMinutes}mins ago`;
-            } else {
-                timeAgo = `${diffSeconds}secs ago`;
-            }
-
-            // Update the button text with the latest tick info
-            document.getElementById('infoButton').textContent = `Last Tick: ${localDateTimeString}\n\n(${timeAgo})`;
-        })
-        .catch(error => {
-            console.error('Error fetching last tick:', error);
-            document.getElementById('infoButton').textContent = 'No tick today or failed to fetch';
-        });
+        document.getElementById('infoButton').textContent = `Last Tick: ${localDateTimeString} (${timeAgo})`;
+    })
+    .catch(error => {
+        console.error('⚠️ Error fetching last tick:', error);
+        document.getElementById('infoButton').textContent = '⏰ Failed to fetch last tick';
+    });
 
 
     // Function to add or modify the dates in the mission text
