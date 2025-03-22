@@ -7,6 +7,7 @@ Allowa
 Alrai Sector HR-W c1-13
 Alrai Sector JC-V c2-28
 Alrai Sector PT-R b4-5
+Alrai Sector PT-R b4-8
 Anali
 Antanyamai
 Arawegali
@@ -111,6 +112,7 @@ Lotigani
 LP 634-24
 LTT 15278
 LTT 15461
+LTT 15820
 LTT 7979
 Lushai
 Madyanmana
