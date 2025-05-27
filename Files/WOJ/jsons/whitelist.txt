@@ -38,6 +38,7 @@ Cerremayeb
 Ch'ingsonde
 Chalbici
 Cizicni
+Col 285 Sector AA-F a41-1
 Col 285 Sector CY-N b21-0
 Col 285 Sector DJ-M b22-2
 Col 285 Sector ID-I c10-6
@@ -64,6 +65,7 @@ Hinook
 HIP 88353
 HIP 88644
 HIP 88728
+HIP 90618
 HIP 91043
 HIP 91295
 HIP 91479
@@ -112,7 +114,6 @@ Lotigani
 LP 634-24
 LTT 15278
 LTT 15461
-LTT 15820
 LTT 7979
 Lushai
 Madyanmana
