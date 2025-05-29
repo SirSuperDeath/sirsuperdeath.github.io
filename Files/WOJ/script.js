@@ -106,15 +106,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Extract the title from the data attribute of the selected option
         var selectedOption = document.getElementById('wordSetSelect').selectedOptions[0];
-        var missionTitle = selectedOption ? selectedOption.dataset.title : '';
-        
+        var titleTemplate = selectedOption ? selectedOption.dataset.title : '';
+
+        var searchWordSelect2 = document.getElementById('searchWordSelect2').value;
+        var replaceWord2 = document.getElementById('replaceWord2').value;
+        var defaultFactionName = 'Wolves Of Jonai';
+        var replacedTitle = titleTemplate.replace(new RegExp(searchWordSelect2, 'g'), replaceWord2 || defaultFactionName);
+
+        var searchWordSelect1 = document.getElementById('searchWordSelect1').value;
+        var replaceWord1 = document.getElementById('replaceWord1').value;
+        var regex1 = new RegExp(searchWordSelect1, 'g');
+        var replacedTitleFinal = replacedTitle.replace(regex1, replaceWord1 || defaultFactionName);
+
         // Insert [PENDING] after the first bracketed segment ([INF])
         if (document.getElementById('pendingCheckbox').checked) {
-            var firstBracketEnd = missionTitle.indexOf(']') + 1;
-            missionTitle = missionTitle.slice(0, firstBracketEnd) + ' [PENDING]' + missionTitle.slice(firstBracketEnd);
+            var firstBracketEnd = replacedTitleFinal.indexOf(']') + 1;
+            replacedTitleFinal = replacedTitleFinal.slice(0, firstBracketEnd) + ' [PENDING]' + replacedTitleFinal.slice(firstBracketEnd);
         }
 
-        document.getElementById('titleOutput').textContent = missionTitle;
+        document.getElementById('titleOutput').textContent = replacedTitleFinal;
+
+        // Show persistent notification with replaced mission title
+        var notification = document.getElementById('notification');
+        notification.innerHTML = `<strong>Mission created:</strong> <span style="color:#fff">${replacedTitleFinal}</span><br>You can now copy the title & full mission with the buttons below`;
+        notification.style.display = "block";
     });
 
     // Copy replaced text to clipboard (existing code)
@@ -122,6 +137,12 @@ document.addEventListener('DOMContentLoaded', function() {
         var outputText = document.getElementById('output').textContent;
         navigator.clipboard.writeText(outputText).then(function() {
             console.log('Text copied to clipboard');
+            // Add animation
+            var btn = document.getElementById('copyButton');
+            btn.classList.add('copy-animation');
+            setTimeout(() => {
+                btn.classList.remove('copy-animation');
+            }, 1100);
         }).catch(function(error) {
             console.error('Error copying text:', error);
         });
@@ -154,27 +175,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
         navigator.clipboard.writeText(replacedText1).then(function() {
             console.log('Title copied to clipboard');
-            document.getElementById('copyTitleButton').classList.add('copy-animation');
+            var btn = document.getElementById('copyTitleButton');
+            btn.classList.add('copy-animation');
             setTimeout(() => {
-                document.getElementById('copyTitleButton').classList.remove('copy-animation');
+                btn.classList.remove('copy-animation');
             }, 1100);
         }).catch(function(error) {
             console.error('Error copying title:', error);
         });
     });
-        // Add event listener for copying the system name
-        document.getElementById('copySystemNameButton').addEventListener('click', function() {
-            var systemName = document.getElementById('replaceWord1').value; // Get the system name value
-            if (systemName) {
-                navigator.clipboard.writeText(systemName).then(function() {
-                    console.log('System name copied to clipboard');
-                }).catch(function(error) {
-                    console.error('Error copying system name:', error);
-                });
-            } else {
-                console.error('System name is empty');
-            }
-        });
+
+    // Add event listener for copying the system name
+    document.getElementById('copySystemNameButton').addEventListener('click', function() {
+        var systemName = document.getElementById('replaceWord1').value; // Get the system name value
+        if (systemName) {
+            navigator.clipboard.writeText(systemName).then(function() {
+                console.log('System name copied to clipboard');
+                // Add animation
+                var btn = document.getElementById('copySystemNameButton');
+                btn.classList.add('copy-animation');
+                setTimeout(() => {
+                    btn.classList.remove('copy-animation');
+                }, 1100);
+            }).catch(function(error) {
+                console.error('Error copying system name:', error);
+            });
+        } else {
+            console.error('System name is empty');
+        }
+    });
 
     // Initial setup based on default selection
     var searchWordSelect2 = document.getElementById('searchWordSelect2').value;
