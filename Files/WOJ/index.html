@@ -5,15 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link id="themeStylesheet" href="styles.css" rel="stylesheet"> 
 <!-- Dark mode by default change to Style1 to make it light mode -->
-<link href="favicon.png" rel="icon">
+<link href="/icons/favicon.png" rel="icon">
+<link rel="manifest" href="/Files/WOJ/manifest.json">
+<meta name="theme-color" content="#235bd3">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href="button-switcher.css" rel="stylesheet">
 <title>Missions</title>
 </head>
 <body>
 <!-- Swap style button (top right) -->
-<button id="swapStyleButton" type="button" title="Swap Style" aria-label="Swap Style">
-    <span id="swapStyleIcon" class="material-icons">dark_mode</span>
+<!--<button id="swapStyleButton" type="button" title="Swap Style" aria-label="Swap Style">
+    <span id="swapStyleIcon" class="material-icons">dark_mode</span>*-->
 </button>
 <div class="container">
     <!-- New buttons -->
@@ -84,5 +86,12 @@
 </div>
 <script src="script.js"></script>
 <script src="button-switcher.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js')
+      .then(() => console.log('Service Worker Registered'))
+      .catch(err => console.error('Service Worker registration failed:', err));
+  }
+</script>
 </body>
 </html>

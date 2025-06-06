@@ -1,0 +1,20 @@
+{
+  "name": "Wolves of Jonai",
+  "short_name": "WOJ",
+  "start_url": "/Files/WOJ/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#235bd3",
+  "icons": [
+    {
+      "src": "/Files/WOJ/icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/Files/WOJ/icons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
