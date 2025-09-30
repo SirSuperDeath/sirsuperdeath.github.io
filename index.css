@@ -554,13 +554,13 @@ body {
       rgba(10, 10, 10, 0.3),
       rgb(10, 10, 10, 1)
     ),
-    url("https://i.imgur.com/dFkXBfH.jpeg");
+    url("/Images/Website_related/BackgroundSSDMainPage.jpeg");
   --background-background: linear-gradient(
       0deg,
       rgba(10, 10, 10, 1),
       rgba(10, 10, 10, 0.6)
     ),
-    url("https://i.imgur.com/dFkXBfH.jpeg") center center fixed;
+    url("/Images/Website_related/BackgroundSSDMainPage.jpeg") center center fixed;
   --height: 50vh;
 }
 
