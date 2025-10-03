@@ -1,19 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Fetch missions and populate dropdown
-    fetch('missions.json')
+    fetch('./missions.json') // Use relative path
     .then(response => response.json())
     .then(data => {
         const missionSelect = document.getElementById('wordSetSelect');
+        missionSelect.innerHTML = ''; // Clear previous options
         data.missions.forEach(mission => {
             const option = document.createElement('option');
-            option.value = mission.value; // Use the raw value directly
-            option.textContent = `${mission.type}`; // Display only the type
-            option.dataset.title = mission.title; // Store the title in a data attribute
+            option.value = mission.id;
+            option.textContent = `${mission.type} [${mission.id}]`;
+            option.dataset.title = mission.title;
+            option.dataset.value = mission.value;
             missionSelect.appendChild(option);
         });
         document.getElementById('customTextInput').style.display = 'none';
-        document.getElementById('wordSetSelect').style.display = 'block';
-        document.getElementById('toggleButton').textContent = 'Use Custom Input';
+        missionSelect.style.display = 'block';
+        // Dispatch the event so index.html can react to it
+        document.dispatchEvent(new Event('missionsLoaded'));
     })
     .catch(error => console.error('Error fetching missions:', error));
 
@@ -83,7 +86,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('wordReplacerForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
-        var text = document.getElementById('wordSetSelect').value;
+        // Use the mission text from the selected option's data-value attribute
+        var selectedOption = document.getElementById('wordSetSelect').selectedOptions[0];
+        var text = selectedOption ? selectedOption.dataset.value : '';
 
         // Replace {dateofmission} and {enddateofmission} in the text
         text = addDatesToMissionText(text);
@@ -216,27 +221,36 @@ document.addEventListener('DOMContentLoaded', function() {
         replaceWord2Input.style.display = 'block'; // Ensure this is set to 'block' initially
         replaceWord2Input.required = false;
     }
-});
-// Your existing script code...
 
-// Function to fetch server status
-function fetchServerStatus() {
-    fetch('https://ed-server-status.orerve.net/')
-        .then(response => response.json())
-        .then(data => {
-            const serverStatusElement = document.getElementById('serverStatus');
+    // Function to fetch server status
+    function fetchServerStatus() {
+        fetch('https://ed-server-status.orerve.net/')
+            .then(response => response.json())
+            .then(data => {
+                const serverStatusElement = document.getElementById('serverStatus');
+                let statusText = data.status || 'Unknown';
+                serverStatusElement.textContent = `Server Status: ${statusText}`;
+            })
+            .catch(() => {
+                document.getElementById('serverStatus').textContent = 'Error fetching server status';
+            });
+    }
 
-            if (data.status === 'Good') {
-                serverStatusElement.innerHTML = 'Server status: <span class="status-online">Good</span>';
-            } else {
-                serverStatusElement.innerHTML = 'Server status: <span class="status-offline">Unavailable</span>';
-            }
-        })
-        .catch(() => {
-            document.getElementById('serverStatus').innerHTML = 'Error fetching server status';
+    // Call the function to fetch server status when needed, e.g., when the page loads:
+    fetchServerStatus();
+
+    // Fetch system names and populate datalist
+    fetch('https://sirsuperdeath.github.io/Files/WOJ/jsons/whitelist.txt')
+    .then(response => response.text())
+    .then(text => {
+        const datalist = document.getElementById('systemList');
+        datalist.innerHTML = '';
+        text.split('\n').map(line => line.trim()).filter(line => line).forEach(name => {
+            const option = document.createElement('option');
+            option.value = name;
+            datalist.appendChild(option);
         });
-}
-
-// Call the function to fetch server status when needed, e.g., when the page loads:
-fetchServerStatus(); // This will trigger the function immediately after the script is loaded
+    })
+    .catch(error => console.error('Error fetching systems:', error));
+});
 
