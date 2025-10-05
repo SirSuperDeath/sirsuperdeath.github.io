@@ -34,9 +34,6 @@
         <input type="radio" id="predefinedInput" name="inputType" value="predefined" checked style="display: none;">
         <input type="radio" id="customInput" name="inputType" value="custom" style="display: none;">
         <label for="wordSetSelect">Mission type:</label>
-        <small style="display:block; margin-bottom:8px; color:gray;">
-            Link Reference: <code>?type=1&amp;system=Jonai&amp;supporting=&amp;pending=0</code>
-        </small>
         <select id="wordSetSelect"></select>
         <textarea id="customTextInput" placeholder="Enter custom text..." style="display: none;"></textarea>
         <div class="checkbox-container">
@@ -131,6 +128,25 @@
   });
 
   // Patch script.js to dispatch 'missionsLoaded' after dropdown is populated
+  // Update URL parameters when form fields change
+  function updateUrlParams() {
+    const type = document.getElementById('wordSetSelect').value;
+    const system = document.getElementById('replaceWord1').value;
+    const supporting = document.getElementById('replaceWord2').value;
+    const pending = document.getElementById('pendingCheckbox').checked ? "1" : "0";
+    const params = new URLSearchParams({
+      type,
+      system,
+      supporting,
+      pending
+    });
+    history.replaceState(null, '', '?' + params.toString());
+  }
+
+  document.getElementById('wordSetSelect').addEventListener('change', updateUrlParams);
+  document.getElementById('replaceWord1').addEventListener('input', updateUrlParams);
+  document.getElementById('replaceWord2').addEventListener('input', updateUrlParams);
+  document.getElementById('pendingCheckbox').addEventListener('change', updateUrlParams);
 </script>
 </body>
 </html>
