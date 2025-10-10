@@ -99,20 +99,57 @@ button:hover,
 }
 
 @media (max-width: 800px) {
-    .button-container-top,
-    .button-container-bottom {
+    .button-container-top {
         flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
     }
-
     .button-container-top a,
-    .button-container-bottom a,
-    .info-button,
-    button,
-    .toggle-button {
-        margin: 4px 0;
-        padding: 8px 8px;
-        font-size: 1em;
+    .button-container-top .help-button,
+    .button-container-top .small-button {
+        min-width: 0;
+        width: 100%;
+        padding: 5px 6px;
+        font-size: 0.90em;
+        margin: 2px 0;
     }
+    .tick-button,
+    #serverStatusButton {
+        padding: 7px 10px;
+        font-size: 0.90em;
+        min-width: 0;
+        margin: 2px 0;
+    }
+    .button-row {
+        flex-direction: row !important;
+        gap: 6px;
+        width: 100%;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .button-row a {
+        flex: 1 1 0;
+        min-width: 0;
+        font-size: 0.90em;
+        padding: 5px 6px;
+        margin: 0;
+    }
+}
+
+/* Button Row Styles */
+.button-row {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.button-row a {
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: center;
 }
 
 /* Form Styles */
@@ -270,6 +307,7 @@ select {
     min-width: 230px;
     justify-content: center;
     box-shadow: 0 1px 8px var(--shadow-color);
+    margin: 7px;
 }
 
 .tick-icon {
