@@ -43,6 +43,7 @@ Col 285 Sector CY-N b21-0
 Col 285 Sector DJ-M b22-2
 Col 285 Sector ID-I c10-6
 Col 285 Sector KY-H c10-20
+Col 285 Sector OE-G c11-13
 Comana
 Cupis
 Decamandak
@@ -141,6 +142,7 @@ Oleleuts
 Onurongo
 Owionenseno
 Palee
+Paletes
 Pardal
 Paribela
 Pataheimr
