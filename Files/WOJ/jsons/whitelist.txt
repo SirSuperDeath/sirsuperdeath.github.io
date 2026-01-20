@@ -6,6 +6,7 @@ Akba Atacab
 Allowa
 Alrai Sector HR-W c1-13
 Alrai Sector JC-V c2-28
+Alrai Sector OY-R b4-1
 Alrai Sector PT-R b4-5
 Alrai Sector PT-R b4-8
 Anali
@@ -45,6 +46,7 @@ Col 285 Sector ID-I c10-6
 Col 285 Sector KY-H c10-20
 Col 285 Sector OE-G c11-13
 Comana
+Cuagsa
 Cupis
 Decamandak
 Deneb el Okab
