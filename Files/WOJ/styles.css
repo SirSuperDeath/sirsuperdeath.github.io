@@ -112,6 +112,7 @@ button:hover,
         padding: 5px 6px;
         font-size: 0.90em;
         margin: 2px 0;
+        box-sizing: border-box;
     }
     .tick-button,
     #serverStatusButton {
@@ -119,6 +120,10 @@ button:hover,
         font-size: 0.90em;
         min-width: 0;
         margin: 2px 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .button-row {
         flex-direction: row !important;
