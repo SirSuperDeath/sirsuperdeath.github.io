@@ -39,6 +39,7 @@ Cerremayeb
 Ch'ingsonde
 Chalbici
 Cizicni
+Col 285 Sector AA-F a41-0
 Col 285 Sector AA-F a41-1
 Col 285 Sector CY-N b21-0
 Col 285 Sector DJ-M b22-2
